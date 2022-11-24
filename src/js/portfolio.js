@@ -25,14 +25,14 @@ class PortfolioItem {
         <p class="section__description">${this.description}</p>
         <ul class="section__buttons-list">
           <li class="section__button-item">
-            <a href="${this.links[0]}" class="section__button" target="_blank" rel="noopener nofollow">
+            <a href="${this.links[0]}" class="section__button" target="_blank" rel="noopener nofollow" aria-label="To ${this.title} on github">
               <svg width="24" height="24" fill="currentColor">
                 <use href="img/sprite.svg#github"></use>
               </svg>
             </a>
           </li>
           <li class="section__button-item">
-            <a href="${this.links[1]}" class="section__button" target="_blank" rel="noopener nofollow">
+            <a href="${this.links[1]}" class="section__button" target="_blank" rel="noopener nofollow" aria-label="To ${this.title} webpage">
               <svg width="24" height="24" fill="currentColor">
                 <use href="img/sprite.svg#portfolio-link"></use>
               </svg>
