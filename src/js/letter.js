@@ -7,4 +7,12 @@ letters.forEach(letter => {
       letter.classList.remove('animated');
     }, 601);
   });
+  letter.addEventListener('touchmove', (event) => {
+    letter.classList.add('animated');
+    console.log('touchst');
+    setTimeout(function() {
+      letter.classList.remove('animated');
+    }, 601);
+    event.preventDefault();
+  });
 });
