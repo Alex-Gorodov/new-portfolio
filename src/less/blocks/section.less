@@ -1,0 +1,52 @@
+.section {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  max-height: 100vh;
+  padding: 300px 160px;
+  direction: rtl;
+  color: @main-color;
+
+  &--odd {
+    direction: ltr;
+    color: @white;
+    background-color: @main-color;
+    box-shadow: 0 0 30px 10px @main-color;
+  }
+
+  &__text-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  &__title {
+    font-size: 50px;
+    margin: 0;
+    text-transform: capitalize;
+  }
+
+  &__description {
+    font-size: 18px;
+    letter-spacing: 0.1em;
+  }
+
+  &__buttons-list {
+    display: flex;
+    padding: 0;
+    gap: 40px;
+    list-style-type: none;
+  }
+
+  &__button {
+    color: inherit;
+    transition: 0.3s;
+
+    &:hover {
+      color: lighten(@main-color, 50%);
+    }
+
+    &:active {
+      opacity: 0.6;
+    }
+  }
+}
