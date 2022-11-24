@@ -1,0 +1,46 @@
+.hero {
+  padding-left: 80px;
+  padding-top: 40px;
+
+  &__title {
+    margin: 0;
+    color: @white;
+    font-size: 50px;
+    letter-spacing: -5px;
+  }
+
+  &__letter {
+    display: inline-block;
+    transition: 0.15s;
+  }
+
+  &__letter:hover {
+    color: lighten(@main-color, 50%);
+  }
+
+  &__description {
+    margin: 40px 0;
+    color: @white;
+    font-size: 18px;
+  }
+
+  &__social-list {
+    display: flex;
+    padding: 0;
+    gap: 30px;
+    list-style-type: none;
+  }
+
+  &__social-button {
+    color: @white;
+    transition: 0.3s;
+
+    &:hover {
+      color: lighten(@main-color, 50%);
+    }
+
+    &:active {
+      opacity: 0.6;
+    }
+  }
+}
