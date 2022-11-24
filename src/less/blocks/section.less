@@ -6,6 +6,12 @@
   direction: rtl;
   color: @main-color;
 
+  @media (max-width: @mobile-only) {
+    grid-template-columns: 1fr;
+    padding: 100px 40px;
+    direction: ltr;
+  }
+
   &--odd {
     direction: ltr;
     color: @white;
@@ -47,6 +53,19 @@
 
     &:active {
       opacity: 0.6;
+    }
+  }
+
+  &__image-wrapper {
+    @media (max-width: @mobile-only) {
+      justify-self: center;
+    }
+  }
+
+  &__image {
+    @media (max-width: @mobile-only) {
+      width: 240px;
+      height: auto;
     }
   }
 }

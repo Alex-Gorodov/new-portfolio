@@ -40,10 +40,10 @@ class PortfolioItem {
           </li>
         </ul>
       </div>
-      <div>
+      <div class="section__image-wrapper">
         <picture>
           <source srcset="img/portfolio/${this.image}.webp 1x, img/portfolio/${this.image}@2x.webp 2x" type="image/webp">
-          <img src="img/portfolio/${this.image}.png" width="547" height="391" alt="${this.alt}" srcset="img/portfolio/${this.image}@2x.png 2x">
+          <img class="section__image" src="img/portfolio/${this.image}.png" width="547" height="391" alt="${this.alt}" srcset="img/portfolio/${this.image}@2x.png 2x">
         </picture>
       </div>
     `;
