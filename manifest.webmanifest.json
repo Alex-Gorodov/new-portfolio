@@ -1,0 +1,14 @@
+{
+  "name": "Alex's Portfolio",
+  "short_name": "Portfolio",
+  "start_url": ".",
+  "display": "standalone",
+  "prefer_related_applications": true,
+  "background_color": "#ffffff",
+  "theme_color": "#000c24",
+  "description": "Hire Junior front-end developer.",
+  "icons": [
+    { "src": "img/favicons/192.png", "type": "image/png", "sizes": "192x192" },
+    { "src": "img/favicons/512.png", "type": "image/png", "sizes": "512x512" }
+  ]
+}

@@ -1,0 +1,1 @@
+let navLinks=Array.from(document.querySelectorAll(".navigation__link"));navLinks.forEach((n=>{n.addEventListener("click",(()=>{for(let n=0;n<navLinks.length;n++)navLinks[n].classList.remove("navigation__link--active");n.classList.add("navigation__link--active")}))}));

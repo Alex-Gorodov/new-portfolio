@@ -1,0 +1,1 @@
+let letters=document.querySelectorAll(".hero__letter");letters.forEach((e=>{e.addEventListener("mouseover",(()=>{e.classList.add("animated"),setTimeout((function(){e.classList.remove("animated")}),601)}))}));
