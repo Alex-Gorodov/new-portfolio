@@ -98,7 +98,7 @@ new PortfolioItem(
 
 new PortfolioItem(
   'Glaccy',
-  'Ice cream online store<br> Thanks, HTML Academy',
+  'Here they sell ice cream with delivery. Design from HTML Academy, too.',
   ['https://github.com/Alex-Gorodov/Glaccy', 'https://alex-gorodov.github.io/Glaccy/'],
   'glaccy',
   'Glaccy',
@@ -107,7 +107,7 @@ new PortfolioItem(
 
 new PortfolioItem(
   'Sedona',
-  'Here they sell ice cream with delivery. Design from HTML Academy, too.',
+  'Some useful information for those who want to go to Sedona. Have you heard about this city?',
   ['https://github.com/htmlacademy-adaptive/590651-sedona-26', 'https://htmlacademy-adaptive.github.io/590651-sedona-26/11/'],
   'sedona',
   'Sedona',
