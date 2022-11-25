@@ -11,12 +11,17 @@
     color: @white;
     font-size: 50px;
     letter-spacing: -5px;
-    transform: skewX(-45deg) translateX(350px);
-    transition: 0.6s;
-
+    cursor: default;
+    
     @media (max-width: @mobile-only) {
       font-size: 40px;
     }
+  }
+  
+  &__letter {
+    transform: skewX(-45deg) translateX(-350px);
+    transition: 0.8s;
+    cursor: default;
   }
 
   &__description {

@@ -25,7 +25,12 @@ navToggle.addEventListener('click', () => {
 });
 
 window.onload = function() {
-  document.querySelector('.hero__title').style.transform = 'skewX(0) translateX(0)';
+  let heroLetters = document.querySelectorAll('.hero__letter');
+  for(let i = 0; i < heroLetters.length; i++){
+    setTimeout(() => {
+      heroLetters[i].style.transform = 'translateX(0) skewX(0)';
+    }, i*22);
+  }
 };
 
 function scrollFunction() {
