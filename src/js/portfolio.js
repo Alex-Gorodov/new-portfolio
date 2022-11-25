@@ -41,9 +41,17 @@ class PortfolioItem {
         </ul>
       </div>
       <div class="section__image-wrapper">
-        <picture>
-          <source srcset="img/portfolio/${this.image}.webp 1x, img/portfolio/${this.image}@2x.webp 2x" type="image/webp">
-          <img class="section__image" src="img/portfolio/${this.image}.png" width="547" height="391" alt="${this.alt}" srcset="img/portfolio/${this.image}@2x.png 2x">
+        <picture class="section__picture section__picture--mobile">
+          <source srcset="img/portfolio/${this.image}-mobile.webp 1x, img/portfolio/${this.image}-mobile@2x.webp 2x" type="image/webp">
+          <img class="section__image section__image--mobile" src="img/portfolio/${this.image}.png" width="103" height="206" alt="${this.alt}" srcset="img/portfolio/${this.image}@2x.png 2x">
+        </picture>
+        <picture class="section__picture section__picture--desktop">
+          <source srcset="img/portfolio/${this.image}.webp 1x, img/portfolio/${this.image}-desktop@2x.webp 2x" type="image/webp">
+          <img class="section__image section__image--desktop" src="img/portfolio/${this.image}.png" width="467" height="371" alt="${this.alt}" srcset="img/portfolio/${this.image}@2x.png 2x">
+        </picture>
+        <picture class="section__picture section__picture--tablet">
+          <source srcset="img/portfolio/${this.image}-tablet.webp 1x, img/portfolio/${this.image}-tablet@2x.webp 2x" type="image/webp">
+          <img class="section__image section__image--tablet" src="img/portfolio/${this.image}.png" width="208" height="306" alt="${this.alt}" srcset="img/portfolio/${this.image}@2x.png 2x">
         </picture>
       </div>
     `;
@@ -76,15 +84,6 @@ new PortfolioItem(
   ['https://github.com/Alex-Gorodov/Cat-Energy', 'https://alex-gorodov.github.io/Cat-Energy/'],
   'cat-energy',
   'Cat energy',
-  '.page__main'
-).render();
-
-new PortfolioItem(
-  'Device',
-  'Gatgets online store<br> From HTML Academy',
-  ['https://github.com/Alex-Gorodov/Device', 'https://alex-gorodov.github.io/Device/'],
-  'device',
-  'Device',
   '.page__main'
 ).render();
 
