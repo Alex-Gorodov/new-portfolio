@@ -1,6 +1,7 @@
 let ww = window.innerWidth;
 let navList = document.querySelector('.navigation__list');
 let navLinks = Array.from(document.querySelectorAll('.navigation__link'));
+const upBtn = document.querySelector('.main__up-btn');
 
 navLinks.forEach(link => {
   link.addEventListener('click', () => {
@@ -27,7 +28,21 @@ window.onload = function() {
   document.querySelector('.hero__title').style.transform = 'skewX(0) translateX(0)';
 };
 
+function scrollFunction() {
+  if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+    upBtn.style.display = 'block';
+  } else {
+    upBtn.style.display = 'none';
+  }
+}
+
+upBtn.addEventListener('click', () => {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+});
+
 window.onscroll = function()  {
+  scrollFunction();
   var texts = document.getElementsByClassName('section__text-wrapper');
   var images = document.getElementsByClassName('section__image-wrapper');
   var titles = document.getElementsByClassName('section__title');
