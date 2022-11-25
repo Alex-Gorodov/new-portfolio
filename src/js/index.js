@@ -33,7 +33,7 @@ window.onload = function() {
       heroLetters[i].classList.add('animated');
       setTimeout(function() {
         heroLetters[i].classList.remove('animated');
-      }, 400);
+      }, 600);
     }, (i*5+15)*10);
   }
   setTimeout(() => {
@@ -85,3 +85,20 @@ window.onscroll = function()  {
     }
   }
 };
+
+function iOS() {
+  return [
+    'iPad Simulator',
+    'iPhone Simulator',
+    'iPod Simulator',
+    'iPad',
+    'iPhone',
+    'iPod'
+  ].includes(navigator.platform);
+}
+
+if (iOS() === true) {
+  document.querySelector('.page').style.backgroundAttachment = 'unset';
+}
+
+console.log(iOS());

@@ -49,7 +49,6 @@ class PortfolioItem {
     `;
     this.parent.append(element);
     portfolio.push(this.element);
-    console.log(portfolio.length);
   }
 }
 
