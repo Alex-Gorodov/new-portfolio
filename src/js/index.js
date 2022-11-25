@@ -30,10 +30,12 @@ window.onload = function() {
   for(let i = 0; i < heroLetters.length; i++){
     setTimeout(() => {
       heroLetters[i].style.transform = 'skewX(0) scale(1)';
-      heroLetters[i].classList.add('animated');
+      setTimeout(function() {
+        heroLetters[i].classList.add('animated');
+      }, 1);
       setTimeout(function() {
         heroLetters[i].classList.remove('animated');
-      }, 50);
+      }, 600);
     }, (i*5+15)*10);
   }
   setTimeout(() => {
