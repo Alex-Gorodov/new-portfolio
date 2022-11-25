@@ -108,7 +108,7 @@ new PortfolioItem(
 
 new PortfolioItem(
   'Sedona',
-  'Gatgets online store<br> From HTML Academy',
+  'Guide to Sedona for tourists<br> From HTML Academy',
   ['https://github.com/htmlacademy-adaptive/590651-sedona-26', 'https://htmlacademy-adaptive.github.io/590651-sedona-26/11/'],
   'sedona',
   'Sedona',
