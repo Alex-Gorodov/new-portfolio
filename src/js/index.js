@@ -61,7 +61,6 @@ window.onscroll = function()  {
   scrollFunction();
   var texts = document.getElementsByClassName('section__text-wrapper');
   var images = document.getElementsByClassName('section__image-wrapper');
-  var mobiles = document.getElementsByClassName('section__picture--mobile');
   var titles = document.getElementsByClassName('section__title');
   var descriptions = document.getElementsByClassName('section__description');
   for(let i = 0; i < texts.length; i++){

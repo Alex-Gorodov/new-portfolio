@@ -62,7 +62,7 @@ class PortfolioItem {
 
 new PortfolioItem(
   'Bright lights',
-  'Landing page of an artist',
+  'Here I tried to make a player, like Spotify.',
   ['https://github.com/Alex-Gorodov/bright-lights', 'https://alex-gorodov.github.io/bright-lights/'],
   'bright-lights',
   'Bright Lights',
@@ -71,7 +71,7 @@ new PortfolioItem(
 
 new PortfolioItem(
   'CreateX',
-  'Multi-page site of online education service',
+  'This is a layout of a site with some courses spied from the Internet.<br> I made it up.',
   ['https://github.com/Alex-Gorodov/CreateX', 'https://alex-gorodov.github.io/CreateX/'],
   'createx',
   'CreateX',
@@ -80,7 +80,7 @@ new PortfolioItem(
 
 new PortfolioItem(
   'Cat energy',
-  'Build a nutrition program for your cat\!<br> From HTML Academy',
+  'This is a site for those who want to build a nutrition for their cat. P.S. to make myself...<br> The design belongs to HTML Academy',
   ['https://github.com/Alex-Gorodov/Cat-Energy', 'https://alex-gorodov.github.io/Cat-Energy/'],
   'cat-energy',
   'Cat energy',
@@ -89,7 +89,7 @@ new PortfolioItem(
 
 new PortfolioItem(
   'Haifa street food',
-  'Food market order service',
+  'Food market order service. I came across a similar service in Norway, so I got one for my city.',
   ['https://github.com/Alex-Gorodov/Haifa-Street-Food', 'https://alex-gorodov.github.io/Haifa-Street-Food/'],
   'haifa',
   'Haifa street food',
@@ -98,7 +98,7 @@ new PortfolioItem(
 
 new PortfolioItem(
   'Glaccy',
-  'Ice cream online store<br> From HTML Academy',
+  'Ice cream online store<br> Thanks, HTML Academy',
   ['https://github.com/Alex-Gorodov/Glaccy', 'https://alex-gorodov.github.io/Glaccy/'],
   'glaccy',
   'Glaccy',
@@ -107,7 +107,7 @@ new PortfolioItem(
 
 new PortfolioItem(
   'Sedona',
-  'Guide to Sedona for tourists<br> From HTML Academy',
+  'Here they sell ice cream with delivery. Design from HTML Academy, too.',
   ['https://github.com/htmlacademy-adaptive/590651-sedona-26', 'https://htmlacademy-adaptive.github.io/590651-sedona-26/11/'],
   'sedona',
   'Sedona',
