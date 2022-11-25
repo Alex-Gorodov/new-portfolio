@@ -26,6 +26,7 @@ navToggle.addEventListener('click', () => {
 
 window.onload = function() {
   let heroLetters = document.querySelectorAll('.hero__letter');
+  let heroDescription = document.querySelector('.hero__description');
   for(let i = 0; i < heroLetters.length; i++){
     setTimeout(() => {
       heroLetters[i].style.transform = 'skewX(0) scale(1)';
@@ -35,6 +36,10 @@ window.onload = function() {
       }, 400);
     }, (i*5+15)*10);
   }
+  setTimeout(() => {
+    heroDescription.style.lineHeight = '24px';
+    heroDescription.style.opacity = '1';
+  }, 500);
 };
 
 function scrollFunction() {
@@ -74,6 +79,9 @@ window.onscroll = function()  {
   for(let i = 0; i < descriptions.length; i++){
     if(descriptions[i].getBoundingClientRect().top <= 800){
       descriptions[i].style.transform = 'skewX(0) translateX(0)';
+      setTimeout(() => {
+        descriptions[i].style.lineHeight = '24px';
+      }, 500);
     }
   }
 };
