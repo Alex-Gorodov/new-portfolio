@@ -1,4 +1,4 @@
-let letters = document.querySelectorAll('.hero__letter');
+let letters = document.querySelectorAll('.letter');
 
 letters.forEach(letter => {
   letter.addEventListener('mouseover', () => {
@@ -9,10 +9,9 @@ letters.forEach(letter => {
   });
   letter.addEventListener('touchmove', (event) => {
     letter.classList.add('animated');
-    console.log('touchst');
     setTimeout(function() {
       letter.classList.remove('animated');
-    }, 601);
+    }, 101);
     event.preventDefault();
   });
 });

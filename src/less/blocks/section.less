@@ -24,17 +24,23 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    transform: translateX(1000px);
+    transition: 0.4s;
   }
 
   &__title {
     font-size: 50px;
     margin: 0;
     text-transform: capitalize;
+    transform: skewX(45deg) translateX(-250px);
+    transition: 0.8s;
   }
 
   &__description {
     font-size: 18px;
     letter-spacing: 0.1em;
+    transform: skewX(-80deg) translateX(-450px);
+    transition: 0.8s;
   }
 
   &__buttons-list {
@@ -59,6 +65,9 @@
   }
 
   &__image-wrapper {
+    transform: translateX(-1000px) skewX(45deg);
+    transition: 0.7s;
+
     @media (max-width: @mobile-only) {
       justify-self: center;
     }
@@ -66,8 +75,20 @@
 
   &__image {
     @media (max-width: @mobile-only) {
-      width: 240px;
+      width: 340px;
       height: auto;
     }
   }
+}
+
+.section--odd .section__text-wrapper {
+  transform: translateX(-1000px);
+}
+
+.section--odd .section__image-wrapper {
+  transform: translateX(1000px) skewX(-45deg);
+}
+
+.section--odd .section__title {
+  transform: skewX(-45deg) translateX(250px);
 }

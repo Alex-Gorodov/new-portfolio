@@ -9,7 +9,7 @@ class PortfolioItem {
     this.alt = alt;
     this.parent = document.querySelector(parentSelector);
   }
-  
+
   render() {
     const element = document.createElement('section');
 
