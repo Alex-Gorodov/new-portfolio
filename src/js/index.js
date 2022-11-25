@@ -33,7 +33,7 @@ window.onload = function() {
       heroLetters[i].classList.add('animated');
       setTimeout(function() {
         heroLetters[i].classList.remove('animated');
-      }, 600);
+      }, 50);
     }, (i*5+15)*10);
   }
   setTimeout(() => {
@@ -59,6 +59,7 @@ window.onscroll = function()  {
   scrollFunction();
   var texts = document.getElementsByClassName('section__text-wrapper');
   var images = document.getElementsByClassName('section__image-wrapper');
+  var mobiles = document.getElementsByClassName('section__picture--mobile');
   var titles = document.getElementsByClassName('section__title');
   var descriptions = document.getElementsByClassName('section__description');
   for(let i = 0; i < texts.length; i++){
@@ -76,6 +77,7 @@ window.onscroll = function()  {
       titles[i].style.transform = 'skewX(0) translateX(0)';
     }
   }
+  
   for(let i = 0; i < descriptions.length; i++){
     if(descriptions[i].getBoundingClientRect().top <= 800){
       descriptions[i].style.transform = 'skewX(0) translateX(0)';

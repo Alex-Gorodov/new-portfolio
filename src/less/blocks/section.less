@@ -85,6 +85,8 @@
       grid-column-start: 1;
       grid-row-end: -1;
       z-index: 1;
+      transform: translate(-500px, 0) scale(0) rotate(270deg);
+      transition: 0.3s;
     }
 
     &--desktop {
@@ -111,7 +113,7 @@
     }
 
     &--mobile:hover {
-      transform: translate3d(10px, -10px, 0) rotate(10deg);
+      transform: translate3d(10px, -20px, 0) rotate(10deg);
     }
 
     &--desktop {
@@ -133,7 +135,7 @@
     }
 
     &--tablet:hover {
-      transform: translate3d(-10px, -30px, 0) rotate(-10deg);
+      transform: translate3d(-10px, -20px, 0) rotate(-10deg);
     }
   }
 }
@@ -151,7 +153,7 @@
 }
 
 .section--odd .section__image--mobile:hover {
-  transform: translate3d(-10px, -10px, 0) rotate(-10deg);
+  transform: translate3d(-10px, -20px, 0) rotate(-10deg);
 }
 
 .section--odd .section__image--tablet:hover {
