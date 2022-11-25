@@ -28,8 +28,12 @@ window.onload = function() {
   let heroLetters = document.querySelectorAll('.hero__letter');
   for(let i = 0; i < heroLetters.length; i++){
     setTimeout(() => {
-      heroLetters[i].style.transform = 'translateX(0) skewX(0)';
-    }, i*22);
+      heroLetters[i].style.transform = 'skewX(0) scale(1)';
+      heroLetters[i].classList.add('animated');
+      setTimeout(function() {
+        heroLetters[i].classList.remove('animated');
+      }, 400);
+    }, (i*5+15)*10);
   }
 };
 
