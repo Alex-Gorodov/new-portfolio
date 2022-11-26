@@ -62,7 +62,7 @@ class PortfolioItem {
 
 new PortfolioItem(
   'Bright lights',
-  'Here I tried to make a player, like Spotify.',
+  'Landing pageof singer. A little player inside.',
   ['https://github.com/Alex-Gorodov/bright-lights', 'https://alex-gorodov.github.io/bright-lights/'],
   'bright-lights',
   'Bright Lights',
@@ -107,7 +107,7 @@ new PortfolioItem(
 
 new PortfolioItem(
   'Sedona',
-  'Some useful information for those who want to go to Sedona. Have you heard about this city?',
+  'Some useful information for those who want to go to Sedona. Have you heard about this city? The design belongs to HTML Academy',
   ['https://github.com/htmlacademy-adaptive/590651-sedona-26', 'https://htmlacademy-adaptive.github.io/590651-sedona-26/11/'],
   'sedona',
   'Sedona',
