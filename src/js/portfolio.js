@@ -62,7 +62,7 @@ class PortfolioItem {
 
 new PortfolioItem(
   'Bright lights',
-  'Landing pageof singer. A little player inside.',
+  'Landing page of singer. Music player inside.',
   ['https://github.com/Alex-Gorodov/bright-lights', 'https://alex-gorodov.github.io/bright-lights/'],
   'bright-lights',
   'Bright Lights',
