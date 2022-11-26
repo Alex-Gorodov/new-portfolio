@@ -80,7 +80,7 @@ new PortfolioItem(
 
 new PortfolioItem(
   'Cat energy',
-  'This is a site for those who want to build a nutrition for their cat. P.S. to make myself...<br> The design belongs to HTML Academy',
+  'This is a site for those who want to build a nutrition for their cat.<br> The design belongs to HTML Academy',
   ['https://github.com/Alex-Gorodov/Cat-Energy', 'https://alex-gorodov.github.io/Cat-Energy/'],
   'cat-energy',
   'Cat energy',

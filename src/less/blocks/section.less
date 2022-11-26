@@ -4,6 +4,7 @@
   min-height: 100vh;
   padding: 300px 160px;
   color: @main-color;
+  gap: 40px;
 
   @media (max-width: @mobile-only) {
     grid-template-columns: 1fr;
@@ -20,8 +21,9 @@
     display: flex;
     padding: 0 40px;
     flex-direction: column;
+    grid-column: 1;
     align-items: flex-start;
-    transform: translateX(1000px);
+    transform: translateX(-1000px);
     transition: 0.8s;
   }
 
@@ -66,12 +68,15 @@
     display: grid;
     align-items: end;
     grid-template-columns: repeat(8, 55px);
-    transform: translateX(-1000px) skewX(-45deg);
+    transform: translateX(1000px) skewX(-45deg);
     transition: 0.7s;
+    grid-row: 1;
+    grid-column: 2;
 
     @media (max-width: @mobile-only) {
       justify-self: center;
       grid-template-columns: repeat(8, 45px);
+      grid-column: 1;
     }
   }
 
@@ -109,7 +114,7 @@
     }
 
     &--mobile:hover {
-      transform: translate3d(10px, -20px, 0) rotate(10deg);
+      transform: translate3d(-10px, -20px, 0) rotate(-10deg);
     }
 
     &--desktop {
@@ -131,14 +136,18 @@
     }
 
     &--tablet:hover {
-      transform: translate3d(-10px, -20px, 0) rotate(-10deg);
+      transform: translate3d(10px, -20px, 0) rotate(10deg);
     }
   }
 }
 
 .section--odd .section__text-wrapper {
   grid-column: 2;
-  transform: translateX(-1000px);
+  transform: translateX(1000px);
+
+  @media (min-width: @tablet) {
+    align-items: end;
+  }
 
   @media (max-width: @mobile-only) {
     grid-column: 1;
@@ -147,17 +156,17 @@
 
 .section--odd .section__image-wrapper {
   grid-column: 1;
-  transform: translateX(1000px) skewX(45deg);
+  transform: translateX(-1000px) skewX(45deg);
 }
 
 .section--odd .section__title {
   transform: skewX(-45deg) translateX(250px);
 }
 
-.section--odd .section__image--mobile:hover {
-  transform: translate3d(-10px, -20px, 0) rotate(-10deg);
-}
+.section--odd .section__description {
+  text-align: right;
 
-.section--odd .section__image--tablet:hover {
-  transform: translate3d(10px, -30px, 0) rotate(10deg);
+  @media (max-width: @mobile-only) {
+    text-align: left;
+  }
 }
