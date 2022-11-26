@@ -46,7 +46,7 @@ class PortfolioItem {
           <img class="section__image section__image--mobile" src="img/portfolio/${this.image}.png" width="103" height="206" alt="${this.alt}" srcset="img/portfolio/${this.image}@2x.png 2x">
         </picture>
         <picture class="section__picture section__picture--desktop">
-          <source srcset="img/portfolio/${this.image}.webp 1x, img/portfolio/${this.image}-desktop@2x.webp 2x" type="image/webp">
+          <source srcset="img/portfolio/${this.image}-desktop.webp 1x, img/portfolio/${this.image}-desktop@2x.webp 2x" type="image/webp">
           <img class="section__image section__image--desktop" src="img/portfolio/${this.image}.png" width="467" height="371" alt="${this.alt}" srcset="img/portfolio/${this.image}@2x.png 2x">
         </picture>
         <picture class="section__picture section__picture--tablet">
