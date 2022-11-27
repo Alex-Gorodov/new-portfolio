@@ -11,6 +11,10 @@
     padding: 100px 0;
   }
 
+  @media (min-width: @tablet) and (max-width: @desktop) {
+    padding: 300px 60px;
+  }
+
   &--odd {
     color: @white;
     background-color: @main-color;
@@ -25,6 +29,10 @@
     align-items: flex-start;
     transform: translateX(-1000px);
     transition: 0.8s;
+
+    @media (min-width: @tablet) and (max-width: @desktop) {
+      padding-right: 0;
+    }
   }
 
   &__title {
