@@ -71,7 +71,7 @@ new PortfolioItem(
 
 new PortfolioItem(
   'CreateX',
-  'This is a layout of a site with some courses taken from the Internet.',
+  'This is a layout of a site with some courses. The design taken from the Internet.',
   ['https://github.com/Alex-Gorodov/CreateX', 'https://alex-gorodov.github.io/CreateX/'],
   'createx',
   'CreateX',
