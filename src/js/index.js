@@ -88,20 +88,3 @@ window.onscroll = function()  {
     }
   }
 };
-
-function iOS() {
-  return [
-    'iPad Simulator',
-    'iPhone Simulator',
-    'iPod Simulator',
-    'iPad',
-    'iPhone',
-    'iPod'
-  ].includes(navigator.platform);
-}
-
-if (iOS() === true) {
-  document.querySelector('.page').style.backgroundAttachment = 'unset';
-}
-
-console.log(iOS());
