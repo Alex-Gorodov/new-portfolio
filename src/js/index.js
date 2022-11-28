@@ -29,10 +29,8 @@ window.onload = function() {
   let heroDescription = document.querySelector('.hero__description');
   for(let i = 0; i < heroLetters.length; i++){
     setTimeout(() => {
-      heroLetters[i].style.transform = 'skewX(0) scale(1)';
-      setTimeout(function() {
-        heroLetters[i].classList.add('animated');
-      }, 1);
+      heroLetters[i].style.transform = 'scale(1)';
+      heroLetters[i].classList.add('animated');
       setTimeout(function() {
         heroLetters[i].classList.remove('animated');
       }, 600);

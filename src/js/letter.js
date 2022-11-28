@@ -11,7 +11,7 @@ letters.forEach(letter => {
     letter.classList.add('animated');
     setTimeout(function() {
       letter.classList.remove('animated');
-    }, 101);
+    }, 601);
     event.preventDefault();
   });
 });
