@@ -29,10 +29,10 @@ window.onload = function() {
   let heroDescription = document.querySelector('.hero__description');
   for(let i = 0; i < heroLetters.length; i++){
     setTimeout(() => {
-      heroLetters[i].style.transform = 'scale(1)';
       heroLetters[i].classList.add('animated');
     }, (i*5+15)*10);
     setTimeout(() => {
+      heroLetters[i].style.transform = 'scale(1)';
       heroLetters[i].classList.remove('animated');
     }, (i*5+15)*10 + 601);
   }
