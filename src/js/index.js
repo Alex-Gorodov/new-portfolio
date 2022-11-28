@@ -30,17 +30,16 @@ window.onload = function() {
   for(let i = 0; i < heroLetters.length; i++){
     setTimeout(() => {
       heroLetters[i].style.transform = 'scale(1)';
-      heroLetters[i].style.color = 'inherit';
       heroLetters[i].classList.add('animated');
-      setTimeout(function() {
-        heroLetters[i].classList.remove('animated');
-      }, 600);
     }, (i*5+15)*10);
+    setTimeout(() => {
+      heroLetters[i].classList.remove('animated');
+    }, (i*5+15)*10 + 601);
   }
   setTimeout(() => {
     heroDescription.style.lineHeight = '24px';
     heroDescription.style.opacity = '1';
-  }, 500);
+  }, 600);
 };
 
 function scrollFunction() {
