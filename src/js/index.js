@@ -30,6 +30,7 @@ window.onload = function() {
   for(let i = 0; i < heroLetters.length; i++){
     setTimeout(() => {
       heroLetters[i].style.transform = 'scale(1)';
+      heroLetters[i].style.color = 'inherit';
       heroLetters[i].classList.add('animated');
       setTimeout(function() {
         heroLetters[i].classList.remove('animated');
