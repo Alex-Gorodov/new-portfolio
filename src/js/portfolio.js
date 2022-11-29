@@ -21,7 +21,7 @@ class PortfolioItem {
 
     element.innerHTML = `
       <div class="section__text-wrapper">
-        <h2 class="section__title">${this.title}</h2>
+        <a class="section__title" href="${this.links[1]}" target="_blank" rel="noopener nofollow" aria-label="To ${this.title} webpage">${this.title}</a>
         <p class="section__description">${this.description}</p>
         <ul class="section__buttons-list">
           <li class="section__button-item">
@@ -80,7 +80,7 @@ new PortfolioItem(
 
 new PortfolioItem(
   'Cat energy',
-  'This is a site for those who want to build a nutrition for their cat.<br> The design belongs to HTML Academy',
+  'This is a site for those who want to build a nutrition for their cat.<br> The design belongs to <a class="html-academy" href="https://htmlacademy.ru" target="_blank" rel="noopener nofollow" aria-label="To HTML Academy site">HTML&nbsp;Academy</a>.',
   ['https://github.com/Alex-Gorodov/Cat-Energy', 'https://alex-gorodov.github.io/Cat-Energy/'],
   'cat-energy',
   'Cat energy',
@@ -98,7 +98,7 @@ new PortfolioItem(
 
 new PortfolioItem(
   'Glaccy',
-  'Here they sell ice cream with delivery. Design from HTML Academy, too.',
+  'Here they sell ice cream with delivery. The design belongs to <a class="html-academy" href="https://htmlacademy.ru" target="_blank" rel="noopener nofollow" aria-label="To HTML Academy site">HTML&nbsp;Academy</a>.',
   ['https://github.com/Alex-Gorodov/Glaccy', 'https://alex-gorodov.github.io/Glaccy/'],
   'glaccy',
   'Glaccy',
@@ -107,7 +107,7 @@ new PortfolioItem(
 
 new PortfolioItem(
   'Sedona',
-  'Some useful information for those who want to go to Sedona. Have you heard about this city? The design belongs to HTML Academy',
+  'Some useful information for those who want to go to Sedona. Have you heard about this city? The design belongs to <a class="html-academy" href="https://htmlacademy.ru" target="_blank" rel="noopener nofollow" aria-label="To HTML Academy site">HTML&nbsp;Academy</a>.',
   ['https://github.com/htmlacademy-adaptive/590651-sedona-26', 'https://htmlacademy-adaptive.github.io/590651-sedona-26/11/'],
   'sedona',
   'Sedona',
