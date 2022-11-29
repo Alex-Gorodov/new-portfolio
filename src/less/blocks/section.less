@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   min-height: 100vh;
-  padding: 300px 160px;
+  padding: 300px;
   color: @main-color;
   gap: 40px;
 
@@ -41,6 +41,10 @@
     text-transform: capitalize;
     transform: skewX(45deg) translateX(-250px);
     transition: 0.8s;
+
+    &::first-letter {
+      color: lighten(@main-color, 30%);
+    }
   }
 
   &__description {
@@ -83,7 +87,7 @@
 
     @media (max-width: @mobile-only) {
       justify-self: center;
-      grid-template-columns: repeat(8, 45px);
+      grid-template-columns: repeat(12, 30px);
       grid-column: 1;
     }
   }
@@ -92,6 +96,7 @@
     align-self: flex-end;
 
     &--mobile {
+      width: max-content;
       grid-column-start: 1;
       grid-row-end: -1;
       z-index: 1;
@@ -99,52 +104,67 @@
     }
 
     &--desktop {
-      grid-column-start: 1;
+      width: max-content;
+      grid-column-start: 2;
       grid-row-end: -1;
       z-index: -1;
     }
 
     &--tablet {
-      grid-column-end: -3;
+      width: max-content;
+      grid-column-start: 9;
       grid-row-end: -1;
       z-index: 1;
     }
   }
 
   &__image {
+    display: block;
     transition: 0.3s;
 
     &--mobile {
       @media (max-width: @mobile-only) {
-        width: 80px;
+        width: 60px;
         height: auto;
       }
     }
 
     &--mobile:hover {
       transform: translate3d(-10px, -20px, 0) rotate(-10deg);
+
+      @media (max-width: @mobile-only) {
+        transform: none;
+      }
     }
 
     &--desktop {
       @media (max-width: @mobile-only) {
-        width: 330px;
+        width: 300px;
         height: auto;
       }
     }
 
     &--desktop:hover {
       transform: translate3d(0, -40px, 0);
+
+      @media (max-width: @mobile-only) {
+        transform: none;
+      }
     }
 
     &--tablet {
       @media (max-width: @mobile-only) {
-        width: 140px;
+        width: 120px;
         height: auto;
       }
     }
 
     &--tablet:hover {
       transform: translate3d(10px, -20px, 0) rotate(10deg);
+
+      @media (max-width: @mobile-only) {
+        transform: none;
+      }
     }
   }
 }
