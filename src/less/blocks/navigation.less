@@ -29,6 +29,7 @@
       height: 3px;
       background-color: @white;
       border-radius: 4px;
+      transition: 0.3s;
     }
 
     &-line::before {
@@ -40,6 +41,7 @@
       background-color: @white;
       border-radius: 4px;
       content: "";
+      transition: 0.3s;
     }
 
     &-line::after {
@@ -51,6 +53,7 @@
       background-color: @white;
       border-radius: 4px;
       content: "";
+      transition: 0.3s;
     }
   }
 
@@ -101,39 +104,30 @@
 
     &:hover {
       opacity: 1;
+      text-shadow: 0 0 20px @white;
     }
 
     &--active {
-      position: relative;
-      color: @main-color;
+      text-shadow: 0 0 10px @white;
       z-index: 1;
       opacity: 1;
-    }
-
-    &--active::before {
-      position: absolute;
-      top: -150%;
-      transition: 0.5s;
-      left: -30%;
-      display: block;
-      width: 200%;
-      height: 98px;
-      background-image: url("../img/link-active.svg");
-      background-size: 100% 98px;
-      background-position: center;
-      background-repeat: no-repeat;
-      content: "";
-      z-index: -1;
-      animation-name: nav-link;
-      animation-duration: 0.6s;
-      animation-timing-function: cubic-bezier(0.47, 0.82, 0.17, 1);
-      animation-fill-mode: forwards;
 
       @media (max-width: @mobile-only) {
-        top: -70%;
-        height: 65px;
-        background-size: 100% 65px;
+        color: @white;
+        text-shadow: 0 0 10px @white;
       }
     }
+  }
+}
+
+.navigation__toggler:hover .navigation__toggler-line {
+  box-shadow: 0 0 10px @white;
+
+  &::before {
+    box-shadow: 0 0 10px @white;
+  }
+
+  &::after {
+    box-shadow: 0 0 10px @white;
   }
 }
