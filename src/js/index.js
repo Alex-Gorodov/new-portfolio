@@ -3,15 +3,6 @@ let navList = document.querySelector('.navigation__list');
 let navLinks = Array.from(document.querySelectorAll('.navigation__link'));
 const upBtn = document.querySelector('.main__up-btn');
 
-navLinks.forEach(link => {
-  link.addEventListener('click', () => {
-    for (let i = 0; i < navLinks.length; i++) {
-      navLinks[i].classList.remove('navigation__link--active');
-    }
-    link.classList.add('navigation__link--active');
-  });
-});
-
 let navToggle = document.querySelector('.navigation__toggler');
 
 navToggle.addEventListener('click', () => {
@@ -24,9 +15,22 @@ navToggle.addEventListener('click', () => {
   navToggle.classList.toggle('navigation__toggler--active');
 });
 
+navLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    for (let i = 0; i < navLinks.length; i++) {
+      navLinks[i].classList.remove('navigation__link--active');
+    }
+    link.classList.add('navigation__link--active');
+    navList.classList.toggle('navigation__list--active');
+    navToggle.classList.toggle('navigation__toggler--active');
+    navToggle.setAttribute('aria-label', 'open menu');
+  });
+});
+
 window.onload = function() {
   let heroLetters = document.querySelectorAll('.hero__letter');
   let heroDescription = document.querySelector('.hero__description');
+  let heroSocial = document.querySelector('.hero__social-list');
   for(let i = 0; i < heroLetters.length; i++){
     setTimeout(() => {
       heroLetters[i].classList.add('animated');
@@ -37,8 +41,10 @@ window.onload = function() {
     }, (i*5+15)*10 + 601);
   }
   setTimeout(() => {
-    heroDescription.style.lineHeight = '24px';
+    heroDescription.style.transform = 'translateY(0)';
     heroDescription.style.opacity = '1';
+    heroSocial.style.transform = 'translateY(0)';
+    heroSocial.style.opacity = '1';
   }, 600);
 };
 
