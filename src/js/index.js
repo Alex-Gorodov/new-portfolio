@@ -33,11 +33,14 @@ window.onload = function() {
   let heroSocial = document.querySelector('.hero__social-list');
   for(let i = 0; i < heroLetters.length; i++){
     setTimeout(() => {
-      heroLetters[i].classList.add('animated');
+      heroLetters[i].classList.add('animated', 'hero__letter--decorated');
+      setTimeout(() => {
+        heroLetters[i].classList.remove('hero__letter--decorated');
+      }, 50);
     }, (i*5+15)*10);
     setTimeout(() => {
-      heroLetters[i].style.transform = 'scale(1)';
       heroLetters[i].classList.remove('animated');
+      heroLetters[i].style.transform = 'scale(1)';
     }, (i*5+15)*10 + 601);
   }
   setTimeout(() => {
