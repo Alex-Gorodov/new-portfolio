@@ -111,23 +111,3 @@ new PortfolioItem(
   'Sedona',
   '.page__main'
 ).render();
-
-let images = document.querySelectorAll('.section__picture');
-console.log(images.length);
-
-for (const image of images) {
-  image.addEventListener('click', () => {
-    image.classList.add('animated');
-    image.style.animationDuration = '0.8s';
-    setTimeout(() => {
-      image.classList.remove('animated');
-    }, 800);
-  });
-  image.addEventListener('touch', () => {
-    image.classList.add('animated');
-    image.style.animationDuration = '0.8s';
-    setTimeout(() => {
-      image.classList.remove('animated');
-    }, 800);
-  });
-}
