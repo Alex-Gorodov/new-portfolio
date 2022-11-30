@@ -12,11 +12,9 @@ class PortfolioItem {
 
   render() {
     const element = document.createElement('section');
-
+    element.classList.add('main__section', 'section');
     if (portfolio.length % 2 === 0) {
-      element.classList.add('section--odd', 'main__section', 'section');
-    } else {
-      element.classList.add('main__section', 'section');
+      element.classList.add('section--odd');
     }
 
     element.innerHTML = `
@@ -113,3 +111,23 @@ new PortfolioItem(
   'Sedona',
   '.page__main'
 ).render();
+
+let images = document.querySelectorAll('.section__picture');
+console.log(images.length);
+
+for (const image of images) {
+  image.addEventListener('click', () => {
+    image.classList.add('animated');
+    image.style.animationDuration = '0.8s';
+    setTimeout(() => {
+      image.classList.remove('animated');
+    }, 800);
+  });
+  image.addEventListener('touch', () => {
+    image.classList.add('animated');
+    image.style.animationDuration = '0.8s';
+    setTimeout(() => {
+      image.classList.remove('animated');
+    }, 800);
+  });
+}
