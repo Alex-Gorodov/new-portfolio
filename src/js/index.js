@@ -57,32 +57,36 @@ upBtn.addEventListener('click', () => {
 
 window.onscroll = function()  {
   scrollFunction();
-  var texts = document.getElementsByClassName('section__text-wrapper');
   var images = document.getElementsByClassName('section__image-wrapper');
   var titles = document.getElementsByClassName('section__title');
   var descriptions = document.getElementsByClassName('section__description');
-  for(let i = 0; i < texts.length; i++){
-    if(texts[i].getBoundingClientRect().top <= 800){
-      texts[i].style.transform = 'translateX(0)';
-    }
-  }
+  var portfolioSocials = document.getElementsByClassName('section__buttons-list');
+  
   for(let i = 0; i < images.length; i++){
     if(images[i].getBoundingClientRect().top <= 700){
-      images[i].style.transform = 'translateX(0) skewX(0)';
+      images[i].style.transform = 'translateY(0) translateX(0) skewX(0)';
+      images[i].style.opacity = '1';
     }
   }
   for(let i = 0; i < titles.length; i++){
-    if(titles[i].getBoundingClientRect().top <= 700){
-      titles[i].style.transform = 'skewX(0) translateX(0)';
+    if(titles[i].getBoundingClientRect().top <= 800){
+      titles[i].style.transform = 'skewX(0) translateX(0) translateY(0)';
+      titles[i].style.opacity = '1';
+      
     }
   }
-  
   for(let i = 0; i < descriptions.length; i++){
-    if(descriptions[i].getBoundingClientRect().top <= 800){
-      descriptions[i].style.transform = 'skewX(0) translateX(0)';
-      setTimeout(() => {
-        descriptions[i].style.lineHeight = '24px';
-      }, 500);
+    if(descriptions[i].getBoundingClientRect().top <= 825){
+      descriptions[i].style.transform = 'skewX(0) translateX(0) translateY(0)';
+      descriptions[i].style.opacity = '1';
+      
+    }
+  }
+  for(let i = 0; i < portfolioSocials.length; i++){
+    if(portfolioSocials[i].getBoundingClientRect().top <= 850){
+      portfolioSocials[i].style.transform = 'translateX(0) translateY(0)';
+      portfolioSocials[i].style.opacity = '1';
+      
     }
   }
 };
