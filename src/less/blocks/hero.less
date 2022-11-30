@@ -37,8 +37,13 @@
   &__social-list {
     display: flex;
     padding: 0;
-    gap: 30px;
     list-style-type: none;
+  }
+
+  &__social-item {
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
   }
 
   &__social-button {
