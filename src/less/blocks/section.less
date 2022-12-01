@@ -6,6 +6,10 @@
   color: @main-color;
   gap: 40px;
 
+  @media (max-height: @screen-rotated) {
+    height: max-content;
+  }
+
   @media (max-width: @mobile-only) {
     grid-template-columns: 1fr;
     padding: 100px 0;
