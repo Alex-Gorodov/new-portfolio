@@ -34,21 +34,21 @@ window.onload = function() {
   for(let i = 0; i < heroLetters.length; i++){
     setTimeout(() => {
       heroLetters[i].classList.add('animated', 'hero__letter--decorated');
+      heroLetters[i].style.transform = 'scale(1)';
       setTimeout(() => {
         heroLetters[i].classList.remove('hero__letter--decorated');
-      }, 50);
-    }, (i*5+15)*10);
+      }, 120);
+    }, (i*5+15)*25);
     setTimeout(() => {
       heroLetters[i].classList.remove('animated');
-      heroLetters[i].style.transform = 'scale(1)';
-    }, (i*5+15)*10 + 601);
+    }, (i*5+15)*25 + 601);
   }
   setTimeout(() => {
     heroDescription.style.transform = 'translateY(0)';
     heroDescription.style.opacity = '1';
     heroSocial.style.transform = 'translateY(0)';
     heroSocial.style.opacity = '1';
-  }, 600);
+  }, 3500);
 };
 
 function scrollFunction() {
