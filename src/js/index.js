@@ -34,13 +34,13 @@ window.onload = function() {
   for(let i = 0; i < heroLetters.length; i++){
     setTimeout(() => {
       heroLetters[i].classList.add('animated', 'hero__letter--decorated');
-      heroLetters[i].style.transform = 'scale(1)';
       setTimeout(() => {
         heroLetters[i].classList.remove('hero__letter--decorated');
       }, 120);
     }, (i*5+15)*25);
     setTimeout(() => {
       heroLetters[i].classList.remove('animated');
+      heroLetters[i].style.transform = 'scale(1)';
     }, (i*5+15)*25 + 601);
   }
   setTimeout(() => {
