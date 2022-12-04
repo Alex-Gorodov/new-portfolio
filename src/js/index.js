@@ -66,11 +66,12 @@ upBtn.addEventListener('click', () => {
 
 window.onscroll = function()  {
   scrollFunction();
-  var images = document.getElementsByClassName('section__image-wrapper');
-  var titles = document.getElementsByClassName('section__title');
-  var descriptions = document.getElementsByClassName('section__description');
-  var portfolioSocials = document.getElementsByClassName('section__buttons-list');
+  var images = document.getElementsByClassName('portfolio-item__image-wrapper');
+  var titles = document.getElementsByClassName('portfolio-item__title');
+  var descriptions = document.getElementsByClassName('portfolio-item__description');
+  var portfolioSocials = document.getElementsByClassName('portfolio-item__buttons-list');
   
+  // Portfolio
   for(let i = 0; i < images.length; i++){
     if(images[i].getBoundingClientRect().top <= 700){
       images[i].style.transform = 'translateY(0) translateX(0) skewX(0)';
@@ -95,7 +96,26 @@ window.onscroll = function()  {
     if(portfolioSocials[i].getBoundingClientRect().top <= 850){
       portfolioSocials[i].style.transform = 'translateX(0) translateY(0)';
       portfolioSocials[i].style.opacity = '1';
-      
     }
+  }
+
+  // Skills
+  const skillsTitle = document.querySelector('.skills__title');
+  const skillsList = document.querySelector('.skills__list');
+  const skillsHtml = document.querySelector('.skills__value--html');
+  const skillsCss = document.querySelector('.skills__value--css');
+  const skillsJs = document.querySelector('.skills__value--js');
+  if(skillsTitle.getBoundingClientRect().top <= 800){
+    skillsTitle.style.transform = 'translateX(0) translateY(0)';
+    skillsTitle.style.opacity = '1';
+    skillsList.style.transform = 'translateX(0) translateY(0)';
+    skillsList.style.opacity = '1';
+    skillsHtml.style.width = '90%';
+    setTimeout(() => {
+      skillsCss.style.width = '75%';
+    }, 300);
+    setTimeout(() => {
+      skillsJs.style.width = '25%';
+    }, 600);
   }
 };

@@ -1,0 +1,115 @@
+.skills {
+  position: relative;
+  min-height: 50vh;
+  padding: 10vh 10vw;
+  color: @main-color;
+  background-color: fade(@main-color, 20%);
+  backdrop-filter: blur(2.5px);
+  box-shadow: 0 0 30px 20px fade(@main-color, 30%);
+
+  @media (max-height: @screen-rotated) {
+    height: max-content;
+  }
+
+  @media (max-width: @mobile-only) {
+    grid-template-columns: 1fr;
+    padding: 100px 40px;
+  }
+
+  @media (min-width: @tablet) and (max-width: @desktop) {
+    padding: 5vh 60px;
+  }
+
+  &__title {
+    font-size: 50px;
+    margin: 0;
+    margin-bottom: 40px;
+    text-transform: capitalize;
+    text-decoration: none;
+    color: inherit;
+    transform: skewX(45deg) translateX(-250px);
+    transition: 0.8s;
+    opacity: 0;
+
+    @media (max-width: @mobile-only) {
+      transform: skewX(0) translateX(0) translateY(200px);
+    }
+  }
+
+  &__list {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    flex-direction: column;
+    list-style-type: none;
+    transform: translateX(-250px);
+    transition: 0.8s;
+    opacity: 0;
+
+    @media (max-width: @mobile-only) {
+      transform: translateX(0) translateY(200px);
+    }
+  }
+
+  &__item {
+    display: grid;
+    margin: 20px 0;
+    grid-template-columns: 100px minmax(300px, 800px);
+    align-items: center;
+    gap: 20px;
+
+    @media (max-width: @mobile-only) {
+      grid-template-columns: 80px minmax(220px, 500px);
+    }
+  }
+
+  &__name {
+    margin: 0;
+    font-size: 36px;
+    text-transform: uppercase;
+    color: fade(@main-color, 75%);
+
+    @media (max-width: @mobile-only) {
+      font-size: 24px;
+      justify-self: end;
+    }
+  }
+
+  &__range {
+    position: relative;
+    display: block;
+    height: 60px;
+    border: 5px solid @main-color;
+    border-radius: 30px;
+
+    @media (max-width: @mobile-only) {
+      height: 40px;
+    }
+  }
+
+  &__value {
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    height: 46px;
+    border-radius: 30px;
+    background-color: @main-color;
+    transition: 3s;
+
+    @media (max-width: @mobile-only) {
+      height: 26px;
+    }
+
+    &--html {
+      width: 0;
+    }
+
+    &--css {
+      width: 0;
+    }
+
+    &--js {
+      width: 0;
+    }
+  }
+}

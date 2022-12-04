@@ -1,4 +1,4 @@
-.section {
+.portfolio-item {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   height: 100vh;
@@ -188,7 +188,7 @@
   }
 }
 
-.section--odd .section__text-wrapper {
+.portfolio-item--odd .portfolio-item__text-wrapper {
   grid-column: 2;
 
   @media (min-width: @tablet) {
@@ -200,7 +200,7 @@
   }
 }
 
-.section--odd .section__image-wrapper {
+.portfolio-item--odd .portfolio-item__image-wrapper {
   grid-column: 1;
   transform: translateX(-1000px) skewX(45deg);
   opacity: 0;
@@ -210,7 +210,7 @@
   }
 }
 
-.section--odd .section__title {
+.portfolio-item--odd .portfolio-item__title {
   transform: skewX(-45deg) translateX(250px);
   opacity: 0;
   text-align: right;
@@ -221,7 +221,7 @@
   }
 }
 
-.section--odd .section__description {
+.portfolio-item--odd .portfolio-item__description {
   text-align: right;
   transform: translateX(450px);
 
@@ -231,7 +231,7 @@
   }
 }
 
-.section--odd .section__buttons-list {
+.portfolio-item--odd .portfolio-item__buttons-list {
   transform: translateX(450px);
   opacity: 0;
 

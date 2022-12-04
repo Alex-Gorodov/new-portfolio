@@ -4,7 +4,7 @@
 
   &__up-btn {
     position: fixed;
-    bottom: 40px;
+    bottom: 60px;
     right: 40px;
     display: none;
     background-color: transparent;
@@ -13,8 +13,11 @@
     z-index: 2;
     cursor: pointer;
 
+    &:hover {
+      opacity: 0.6;
+    }
+
     @media (max-width: @mobile-only) {
-      bottom: 20px;
       right: 20px;
     }
   }

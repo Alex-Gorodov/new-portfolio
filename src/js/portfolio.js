@@ -11,26 +11,26 @@ class PortfolioItem {
   }
 
   render() {
-    const element = document.createElement('section');
-    element.classList.add('main__section', 'section');
+    const element = document.createElement('div');
+    element.classList.add('portfolio-item');
     if (portfolio.length % 2 === 0) {
-      element.classList.add('section--odd');
+      element.classList.add('portfolio-item--odd');
     }
 
     element.innerHTML = `
-      <div class="section__text-wrapper">
-        <a class="section__title" href="${this.links[1]}" target="_blank" rel="noopener nofollow" aria-label="To ${this.title} webpage">${this.title}</a>
-        <p class="section__description">${this.description}</p>
-        <ul class="section__buttons-list">
-          <li class="section__button-item">
-            <a href="${this.links[0]}" class="section__button" target="_blank" rel="noopener nofollow" aria-label="To ${this.title} on github">
+      <div class="portfolio-item__text-wrapper">
+        <a class="portfolio-item__title" href="${this.links[1]}" target="_blank" rel="noopener nofollow" aria-label="To ${this.title} webpage">${this.title}</a>
+        <p class="portfolio-item__description">${this.description}</p>
+        <ul class="portfolio-item__buttons-list">
+          <li class="portfolio-item__button-item">
+            <a href="${this.links[0]}" class="portfolio-item__button" target="_blank" rel="noopener nofollow" aria-label="To ${this.title} on github">
               <svg width="24" height="24" fill="currentColor">
                 <use href="img/sprite.svg#github"></use>
               </svg>
             </a>
           </li>
-          <li class="section__button-item">
-            <a href="${this.links[1]}" class="section__button" target="_blank" rel="noopener nofollow" aria-label="To ${this.title} webpage">
+          <li class="portfolio-item__button-item">
+            <a href="${this.links[1]}" class="portfolio-item__button" target="_blank" rel="noopener nofollow" aria-label="To ${this.title} webpage">
               <svg width="24" height="24" fill="currentColor">
                 <use href="img/sprite.svg#portfolio-link"></use>
               </svg>
@@ -38,18 +38,18 @@ class PortfolioItem {
           </li>
         </ul>
       </div>
-      <div class="section__image-wrapper">
-        <picture class="section__picture section__picture--mobile">
+      <div class="portfolio-item__image-wrapper">
+        <picture class="portfolio-item__picture portfolio-item__picture--mobile">
           <source srcset="img/portfolio/${this.image}-mobile.webp 1x, img/portfolio/${this.image}-mobile@2x.webp 2x" type="image/webp">
-          <img class="section__image section__image--mobile" src="img/portfolio/${this.image}.png" width="103" height="206" alt="${this.alt}" srcset="img/portfolio/${this.image}@2x.png 2x">
+          <img class="portfolio-item__image portfolio-item__image--mobile" src="img/portfolio/${this.image}.png" width="103" height="206" alt="${this.alt}" srcset="img/portfolio/${this.image}@2x.png 2x">
         </picture>
-        <picture class="section__picture section__picture--desktop">
+        <picture class="portfolio-item__picture portfolio-item__picture--desktop">
           <source srcset="img/portfolio/${this.image}-desktop.webp 1x, img/portfolio/${this.image}-desktop@2x.webp 2x" type="image/webp">
-          <img class="section__image section__image--desktop" src="img/portfolio/${this.image}.png" width="467" height="371" alt="${this.alt}" srcset="img/portfolio/${this.image}@2x.png 2x">
+          <img class="portfolio-item__image portfolio-item__image--desktop" src="img/portfolio/${this.image}.png" width="467" height="371" alt="${this.alt}" srcset="img/portfolio/${this.image}@2x.png 2x">
         </picture>
-        <picture class="section__picture section__picture--tablet">
+        <picture class="portfolio-item__picture portfolio-item__picture--tablet">
           <source srcset="img/portfolio/${this.image}-tablet.webp 1x, img/portfolio/${this.image}-tablet@2x.webp 2x" type="image/webp">
-          <img class="section__image section__image--tablet" src="img/portfolio/${this.image}.png" width="208" height="306" alt="${this.alt}" srcset="img/portfolio/${this.image}@2x.png 2x">
+          <img class="portfolio-item__image portfolio-item__image--tablet" src="img/portfolio/${this.image}.png" width="208" height="306" alt="${this.alt}" srcset="img/portfolio/${this.image}@2x.png 2x">
         </picture>
       </div>
     `;
@@ -64,7 +64,7 @@ new PortfolioItem(
   ['https://github.com/Alex-Gorodov/bright-lights', 'https://alex-gorodov.github.io/bright-lights/'],
   'bright-lights',
   'Bright Lights',
-  '.page__main'
+  '.portfolio'
 ).render();
 
 new PortfolioItem(
@@ -73,7 +73,7 @@ new PortfolioItem(
   ['https://github.com/Alex-Gorodov/CreateX', 'https://alex-gorodov.github.io/CreateX/'],
   'createx',
   'CreateX',
-  '.page__main'
+  '.portfolio'
 ).render();
 
 new PortfolioItem(
@@ -82,7 +82,7 @@ new PortfolioItem(
   ['https://github.com/Alex-Gorodov/Cat-Energy', 'https://alex-gorodov.github.io/Cat-Energy/'],
   'cat-energy',
   'Cat energy',
-  '.page__main'
+  '.portfolio'
 ).render();
 
 new PortfolioItem(
@@ -91,7 +91,7 @@ new PortfolioItem(
   ['https://github.com/Alex-Gorodov/Haifa-Street-Food', 'https://alex-gorodov.github.io/Haifa-Street-Food/'],
   'haifa',
   'Haifa street food',
-  '.page__main'
+  '.portfolio'
 ).render();
 
 new PortfolioItem(
@@ -100,7 +100,7 @@ new PortfolioItem(
   ['https://github.com/Alex-Gorodov/Glaccy', 'https://alex-gorodov.github.io/Glaccy/'],
   'glaccy',
   'Glaccy',
-  '.page__main'
+  '.portfolio'
 ).render();
 
 new PortfolioItem(
@@ -109,5 +109,5 @@ new PortfolioItem(
   ['https://github.com/htmlacademy-adaptive/590651-sedona-26', 'https://htmlacademy-adaptive.github.io/590651-sedona-26/11/'],
   'sedona',
   'Sedona',
-  '.page__main'
+  '.portfolio'
 ).render();
