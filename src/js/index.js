@@ -101,21 +101,28 @@ window.onscroll = function()  {
 
   // Skills
   const skillsTitle = document.querySelector('.skills__title');
-  const skillsList = document.querySelector('.skills__list');
+  const skillsList = document.querySelectorAll('.skills__item');
   const skillsHtml = document.querySelector('.skills__value--html');
   const skillsCss = document.querySelector('.skills__value--css');
   const skillsJs = document.querySelector('.skills__value--js');
+  console.log(skillsList.length);
   if(skillsTitle.getBoundingClientRect().top <= 800){
     skillsTitle.style.transform = 'translateX(0) translateY(0)';
     skillsTitle.style.opacity = '1';
-    skillsList.style.transform = 'translateX(0) translateY(0)';
-    skillsList.style.opacity = '1';
-    skillsHtml.style.width = '90%';
+    for (let i = 0; i < skillsList.length; i++) {
+      setTimeout(() => {
+        skillsList[i].style.transform = 'translateX(0) translateY(0)';
+        skillsList[i].style.opacity = '1';
+      }, i*300);
+    }
     setTimeout(() => {
-      skillsCss.style.width = '75%';
-    }, 300);
+      skillsHtml.style.width = '90%';
+    }, 800);
+    setTimeout(() => {
+      skillsCss.style.width = '70%';
+    }, 1100);
     setTimeout(() => {
       skillsJs.style.width = '25%';
-    }, 600);
+    }, 1400);
   }
 };
