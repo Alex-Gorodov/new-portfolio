@@ -113,7 +113,7 @@ window.onscroll = function()  {
       setTimeout(() => {
         skillsList[i].style.transform = 'translateX(0) translateY(0)';
         skillsList[i].style.opacity = '1';
-      }, i*300);
+      }, i*300 + 300);
     }
     setTimeout(() => {
       skillsHtml.style.width = '90%';
