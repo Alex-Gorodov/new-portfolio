@@ -6,9 +6,20 @@ const header = document.querySelector('.header');
 
 window.addEventListener('load', () => {
   if (ww >= 768) {
-    header.style.backgroundSize = '1000px 800px';
+    header.style.backgroundSize = '1000px 400px';
+    // setTimeout(() => {
+      console.log('second');
+      header.style.backgroundSize = '1000px 800px';
+      header.style.transition = '4s';
+    // }, 800);
   } else {
-    header.style.backgroundSize = '840px 680px';
+    header.style.backgroundSize = '540px 420px';
+    // setTimeout(() => {
+      console.log('second');
+      header.style.backgroundSize = '540px 820px';
+      header.style.transition = '4s';
+    // }, 800);
+    
   }
 });
 
