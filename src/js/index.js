@@ -82,7 +82,6 @@ window.onscroll = function()  {
     if(titles[i].getBoundingClientRect().top <= 800){
       titles[i].style.transform = 'skewX(0) translateX(0) translateY(0)';
       titles[i].style.opacity = '1';
-      
     }
   }
   for(let i = 0; i < descriptions.length; i++){
