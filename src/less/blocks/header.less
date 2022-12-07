@@ -1,15 +1,6 @@
 .header {
   height: 100vh;
-  background-image: url("../img/header-blop.svg");
-  background-size: 1000px 0;
-  background-repeat: no-repeat;
-  background-position: -100px 0;
   transition: 1s;
-
-  @media (max-width: @mobile-only) {
-    background-size: 540px 0;
-    background-position: -20px -20px;
-  }
 
   @media (max-height: @screen-rotated) {
     height: max-content;
@@ -19,7 +10,7 @@
     color: @main-color;
     transition: 0.3s;
 
-    @media (max-width: 1135px) {
+    @media (max-width: 600px) {
       color: @white;
     }
   }
