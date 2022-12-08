@@ -1,5 +1,5 @@
-<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-  <path fill="#000c24" transform="translate(100 100)">
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" width="100%">
+  <path fill="#000c24">
     <animate 
       attributeName="d"
       dur="10s"
