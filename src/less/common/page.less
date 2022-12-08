@@ -27,17 +27,20 @@
 
   &__blob {
     position: absolute;
-    inset: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     max-height: fit-content;
     z-index: -1;
 
     &--shadow {
       color: lighten(@main-color, 30%);
-      filter: blur(50px);
+      filter: blur(10px);
     }
 
     @media (min-width: @desktop) {
-      transform: scale(1.5, 0.6) translate(-400px, -900px);
+      transform: scale(1, 1) translate(-400px, -500px);
     }
 
     @media (min-width: @tablet) and (max-width: @desktop) {
