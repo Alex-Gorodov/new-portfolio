@@ -1,19 +1,16 @@
 .page {
   position: relative;
+  overflow-x: hidden;
   display: flex;
   flex-direction: column;
   min-height: 100%;
-  overflow-x: clip;
   padding: 0;
   margin: 0;
   font-family: "Coolvetica", "Arial", sans-serif;
 
   &__background {
     position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
+    inset: 0;
     background-image: url("../img/shape.svg");
     background-repeat: round;
     background-size: 60px 130px;
@@ -21,18 +18,29 @@
     z-index: -1;
   }
 
+  &__blop-wrapper {
+    position: absolute;
+    overflow: hidden;
+    min-height: 100vh;
+    width: 100vw;
+  }
+
   &__blob {
     position: absolute;
     inset: 0;
-    transform: scale(0.9) translate(-400px, -700px);
+    max-height: fit-content;
     z-index: -1;
 
-    @media (max-width: 1550px) {
-      transform: scale(0.7) translate(-760px, -1800px);
+    // @media (min-width: @tablet) {
+    //   transform: scale(2.5, 1) translate(-400px, -300px);
+    // }
+
+    @media (min-width: @tablet) and (max-width: 1170px) {
+      transform: scale(1.7, 1) translate(-300px, -300px);
     }
 
     @media (max-width: @mobile-only) {
-      transform: scale(2.5, 2) translate(0, 1450px);
+      transform: scale(2.5) translate(0, 0);
     }
   }
 }
