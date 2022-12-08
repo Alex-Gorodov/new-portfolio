@@ -31,16 +31,16 @@
     max-height: fit-content;
     z-index: -1;
 
-    // @media (min-width: @tablet) {
-    //   transform: scale(2.5, 1) translate(-400px, -300px);
-    // }
+    @media (min-width: @desktop) {
+      transform: scale(1.5, 0.6) translate(-400px, -900px);
+    }
 
-    @media (min-width: @tablet) and (max-width: 1170px) {
-      transform: scale(1.7, 1) translate(-300px, -300px);
+    @media (min-width: @tablet) and (max-width: @desktop) {
+      transform: scale(1.7, 1) translate(-100px, -200px);
     }
 
     @media (max-width: @mobile-only) {
-      transform: scale(2.5) translate(0, 0);
+      transform: scale(2.3, 1.5) translate(0, 0);
     }
   }
 }
