@@ -20,27 +20,4 @@
     background-position: center;
     z-index: -1;
   }
-
-  &__blop-wrapper {
-    position: absolute;
-    top: 0;
-    left: 0;
-    min-height: 100vh;
-  }
-
-  &__blop {
-    position: absolute;
-    width: 1200px;
-    height: 1200px;
-
-    &--blured {
-      filter: blur(50px);
-      color: lighten(@main-color, 20%);
-    }
-
-    @media (max-width: @mobile-only) {
-      width: 1000px;
-      height: 1000px;
-    }
-  }
 }
