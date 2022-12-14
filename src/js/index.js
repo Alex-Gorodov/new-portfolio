@@ -2,18 +2,23 @@ let ww = window.innerWidth;
 let navList = document.querySelector('.navigation__list');
 let navLinks = Array.from(document.querySelectorAll('.navigation__link'));
 const upBtn = document.querySelector('.main__up-btn');
+
 const blobs = document.querySelectorAll('.page__blob');
 const blobAnimates = document.querySelectorAll('.page__blob-animate');
 
+let heroLetters = document.querySelectorAll('.hero__letter');
+let heroDescription = document.querySelector('.hero__description');
+let heroSocial = document.querySelector('.hero__social-list');
+
 window.addEventListener('load', function() {
-  // setTimeout(() => {
+  setTimeout(() => {
     blobs.forEach(blob => {
       blob.classList.remove('page__blob--preloader');
     });
     blobAnimates.forEach(item => {
       item.setAttribute('dur', '7s');
     });
-  // }, 1000);
+  }, 50);
 });
 
 let navToggle = document.querySelector('.navigation__toggler');
@@ -41,21 +46,29 @@ navLinks.forEach(link => {
 });
 
 window.onload = function() {
-  let heroLetters = document.querySelectorAll('.hero__letter');
-  let heroDescription = document.querySelector('.hero__description');
-  let heroSocial = document.querySelector('.hero__social-list');
-  for(let i = 0; i < heroLetters.length; i++){
-    setTimeout(() => {
-      heroLetters[i].classList.add('animated', 'hero__letter--decorated');
+  setTimeout(() => {
+    blobs.forEach(blob => {
+      blob.classList.remove('page__blob--preloader');
+    });
+    blobAnimates.forEach(item => {
+      item.setAttribute('dur', '7s');
+    });
+  }, 300);
+
+  setTimeout(() => {
+      for(let i = 0; i < heroLetters.length; i++){
       setTimeout(() => {
-        heroLetters[i].classList.remove('hero__letter--decorated');
-      }, 120);
-    }, (i*5+15)*25);
-    setTimeout(() => {
-      heroLetters[i].classList.remove('animated');
-      heroLetters[i].style.transform = 'scale(1)';
-    }, (i*5+15)*25 + 601);
-  }
+        heroLetters[i].classList.add('animated', 'hero__letter--decorated');
+        setTimeout(() => {
+          heroLetters[i].classList.remove('hero__letter--decorated');
+        }, 120);
+      }, (i*5+15)*25);
+      setTimeout(() => {
+        heroLetters[i].classList.remove('animated');
+        heroLetters[i].style.transform = 'scale(1)';
+      }, (i*5+15)*25 + 601);
+    }
+  }, 250);
   setTimeout(() => {
     heroDescription.style.transform = 'translateY(0)';
     heroDescription.style.opacity = '1';
