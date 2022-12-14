@@ -2,6 +2,19 @@ let ww = window.innerWidth;
 let navList = document.querySelector('.navigation__list');
 let navLinks = Array.from(document.querySelectorAll('.navigation__link'));
 const upBtn = document.querySelector('.main__up-btn');
+const blobs = document.querySelectorAll('.page__blob');
+const blobAnimates = document.querySelectorAll('.page__blob-animate');
+
+window.addEventListener('load', function() {
+  // setTimeout(() => {
+    blobs.forEach(blob => {
+      blob.classList.remove('page__blob--preloader');
+    });
+    blobAnimates.forEach(item => {
+      item.setAttribute('dur', '7s');
+    });
+  // }, 1000);
+});
 
 let navToggle = document.querySelector('.navigation__toggler');
 
