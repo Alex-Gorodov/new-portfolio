@@ -3,8 +3,8 @@ let navList = document.querySelector('.navigation__list');
 let navLinks = Array.from(document.querySelectorAll('.navigation__link'));
 const upBtn = document.querySelector('.main__up-btn');
 
-const blobs = document.querySelectorAll('.page__blob');
-const blobAnimates = document.querySelectorAll('.page__blob-animate');
+const blops = document.querySelectorAll('.page__blop');
+const blopAnimates = document.querySelectorAll('.page__blop-animate');
 
 let heroLetters = document.querySelectorAll('.hero__letter');
 let heroDescription = document.querySelector('.hero__description');
@@ -36,18 +36,18 @@ navLinks.forEach(link => {
 
 window.onload = function() {
   setTimeout(() => {
-    blobs.forEach(blob => {
-      blob.classList.remove('page__blob--preloader');
+    blops.forEach(blop => {
+      blop.classList.remove('page__blop--preloader');
     });
-    blobAnimates.forEach(item => {
+    blopAnimates.forEach(item => {
       item.setAttribute('dur', '7s');
     });
   }, 50);
   setTimeout(() => {
-    blobs.forEach(blob => {
-      blob.classList.remove('page__blob--preloader');
+    blops.forEach(blop => {
+      blop.classList.remove('page__blop--preloader');
     });
-    blobAnimates.forEach(item => {
+    blopAnimates.forEach(item => {
       item.setAttribute('dur', '7s');
     });
   }, 300);
