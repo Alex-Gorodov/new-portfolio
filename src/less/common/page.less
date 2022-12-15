@@ -37,6 +37,7 @@
     bottom: 0;
     max-height: fit-content;
     transition: 1s;
+    transition-timing-function: cubic-bezier(0.2, 1.8, 0.4, 1.98);
 
     &--shadow {
       filter: blur(5px);
@@ -61,7 +62,7 @@
       position: fixed;
       top: 50%;
       left: 50%;
-      transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%) scale(0);
       width: 100px;
     }
   }
