@@ -10,17 +10,6 @@ let heroLetters = document.querySelectorAll('.hero__letter');
 let heroDescription = document.querySelector('.hero__description');
 let heroSocial = document.querySelector('.hero__social-list');
 
-window.addEventListener('load', function() {
-  setTimeout(() => {
-    blobs.forEach(blob => {
-      blob.classList.remove('page__blob--preloader');
-    });
-    blobAnimates.forEach(item => {
-      item.setAttribute('dur', '7s');
-    });
-  }, 50);
-});
-
 let navToggle = document.querySelector('.navigation__toggler');
 
 navToggle.addEventListener('click', () => {
@@ -46,7 +35,14 @@ navLinks.forEach(link => {
 });
 
 window.onload = function() {
-  document.getElementById('preloader').remove();
+  setTimeout(() => {
+    blobs.forEach(blob => {
+      blob.classList.remove('page__blob--preloader');
+    });
+    blobAnimates.forEach(item => {
+      item.setAttribute('dur', '7s');
+    });
+  }, 50);
   setTimeout(() => {
     blobs.forEach(blob => {
       blob.classList.remove('page__blob--preloader');
