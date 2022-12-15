@@ -83,6 +83,8 @@ window.onscroll = function()  {
   var titles = document.getElementsByClassName('portfolio-item__title');
   var descriptions = document.getElementsByClassName('portfolio-item__description');
   var portfolioSocials = document.getElementsByClassName('portfolio-item__buttons-list');
+  var mobiles = document.getElementsByClassName('portfolio-item__picture--mobile');
+  var tablets = document.getElementsByClassName('portfolio-item__picture--tablet');
   
   // Portfolio
   for(let i = 0; i < images.length; i++){
@@ -91,6 +93,21 @@ window.onscroll = function()  {
       images[i].style.opacity = '1';
     }
   }
+  for(let i = 0; i < mobiles.length; i++){
+    if(mobiles[i].getBoundingClientRect().top <= 700){
+      setTimeout(() => {
+        mobiles[i].style.transform = 'translateX(0)';
+      }, 300);
+    }
+  }
+  for(let i = 0; i < tablets.length; i++){
+    if(tablets[i].getBoundingClientRect().top <= 700){
+      setTimeout(() => {
+        tablets[i].style.transform = 'translateX(0)';
+      }, 150);
+    }
+  }
+  
   for(let i = 0; i < titles.length; i++){
     if(titles[i].getBoundingClientRect().top <= 800){
       titles[i].style.transform = 'skewX(0) translateX(0) translateY(0)';
