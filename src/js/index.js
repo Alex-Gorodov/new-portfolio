@@ -87,7 +87,7 @@ window.onscroll = function()  {
   // Portfolio
   for(let i = 0; i < images.length; i++){
     if(images[i].getBoundingClientRect().top <= 700){
-      images[i].style.transform = 'translateY(0) translateX(0) skewX(0)';
+      images[i].style.transform = 'translateY(0) translateX(0) skew(0)';
       images[i].style.opacity = '1';
     }
   }

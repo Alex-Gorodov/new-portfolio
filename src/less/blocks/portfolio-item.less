@@ -109,16 +109,15 @@
     display: grid;
     align-items: end;
     grid-template-columns: repeat(8, 55px);
-    transform: translateX(1000px) skewX(-45deg);
-    transition: 0.7s;
+    transform: translateX(1000px) skew(-45deg);
+    transition: cubic-bezier(0.5, 1, 0.5, 1) 0.8s;
     grid-row: 1;
     grid-column: 2;
     opacity: 0;
 
     @media (max-width: @mobile-only) {
       justify-self: center;
-      transform: translateY(300px) skewX(0);
-      opacity: 0;
+      transform: skew(-89.9deg);
       grid-template-columns: repeat(12, 30px);
       grid-column: 1;
     }
@@ -126,7 +125,6 @@
 
   &__picture {
     align-self: flex-end;
-    transition: 0.3s;
 
     &--mobile {
       width: max-content;
@@ -164,7 +162,6 @@
 
   &__image {
     display: block;
-    transition: 0.3s;
 
     &--mobile {
       @media (max-width: @mobile-only) {
@@ -203,17 +200,15 @@
 
 .portfolio-item--odd .portfolio-item__image-wrapper {
   grid-column: 1;
-  transform: translateX(-1000px) skewX(45deg);
-  opacity: 0;
+  transform: translateX(-1000px) skew(45deg);
 
   @media (max-width: @mobile-only) {
-    transform: translateY(300px) skewX(0);
+    transform: skew(89.9deg);
   }
 }
 
 .portfolio-item--odd .portfolio-item__title {
   transform: skewX(-45deg) translateX(250px);
-  opacity: 0;
   text-align: right;
 
   @media (max-width: @mobile-only) {
@@ -234,7 +229,6 @@
 
 .portfolio-item--odd .portfolio-item__buttons-list {
   transform: translateX(450px);
-  opacity: 0;
 
   @media (max-width: @mobile-only) {
     transform: translateX(0) translateY(200px);
