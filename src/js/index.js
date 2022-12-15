@@ -39,7 +39,7 @@ window.onload = function() {
     blop.classList.remove('page__blop--preloader');
   });
   blopAnimates.forEach(item => {
-    item.setAttribute('dur', '7s');
+    item.setAttribute('dur', '10s');
   });
 
   setTimeout(() => {
