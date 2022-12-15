@@ -35,22 +35,12 @@ navLinks.forEach(link => {
 });
 
 window.onload = function() {
-  setTimeout(() => {
-    blops.forEach(blop => {
-      blop.classList.remove('page__blop--preloader');
-    });
-    blopAnimates.forEach(item => {
-      item.setAttribute('dur', '7s');
-    });
-  }, 50);
-  setTimeout(() => {
-    blops.forEach(blop => {
-      blop.classList.remove('page__blop--preloader');
-    });
-    blopAnimates.forEach(item => {
-      item.setAttribute('dur', '7s');
-    });
-  }, 300);
+  blops.forEach(blop => {
+    blop.classList.remove('page__blop--preloader');
+  });
+  blopAnimates.forEach(item => {
+    item.setAttribute('dur', '7s');
+  });
 
   setTimeout(() => {
       for(let i = 0; i < heroLetters.length; i++){
