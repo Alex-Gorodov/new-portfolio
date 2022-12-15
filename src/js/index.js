@@ -46,6 +46,7 @@ navLinks.forEach(link => {
 });
 
 window.onload = function() {
+  document.getElementById('preloader').remove();
   setTimeout(() => {
     blobs.forEach(blob => {
       blob.classList.remove('page__blob--preloader');
