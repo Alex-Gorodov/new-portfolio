@@ -16,15 +16,16 @@ submit.onclick = function () {
     });
     for (let i = 0; i < inputs.length; i++) {
       if (!inputs[i].validity.valid) {
-            labels[i].classList.add('contact__item--invalid');
-            error.classList.add('modal--show');
-            setTimeout(() => {
-              error.style.transition = '0.5s';
-              error.classList.remove('modal--show');
-            }, 5000);
-            error.style.transition = 'cubic-bezier(0, 0.7, 0.2, 1.1) 0.5s';
-        } else {
-          labels[i].classList.remove('contact__item--invalid');
-        }
+        inputs[i].blur();
+        labels[i].classList.add('contact__item--invalid');
+        error.classList.add('modal--show');
+        setTimeout(() => {
+          error.style.transition = '0.5s';
+          error.classList.remove('modal--show');
+        }, 5000);
+        error.style.transition = 'cubic-bezier(0, 0.7, 0.2, 1.1) 0.5s';
+      } else {
+        labels[i].classList.remove('contact__item--invalid');
+      }
     }
 };
