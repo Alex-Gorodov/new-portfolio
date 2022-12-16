@@ -14,8 +14,12 @@
 
   &__description {
     margin: 0;
-    font-size: 20px;
+    font-size: 22px;
     line-height: 1.4em;
+
+    @media (max-width: @mobile-only) {
+      font-size: 20px;
+    }
   }
 
   &__form {
@@ -82,12 +86,14 @@
   &__submit {
     padding: 10px;
     margin: 0;
-    grid-column: 1/-1;
-    border: 2px solid @main-color;
-    background-color: transparent;
+    border: none;
+    outline: 2px solid @main-color;
     border-radius: 0;
-    cursor: pointer;
+    grid-column: 1/-1;
+    background-color: transparent;
     color: @main-color;
+    cursor: pointer;
+    font-weight: 700;
     transition: 0.3s;
 
     &:hover {
