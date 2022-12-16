@@ -1,11 +1,15 @@
 .modal {
   position: fixed;
-  bottom: 100px;
-  right: 50px;
+  bottom: 60px;
+  left: 10vw;
   padding: 20px 10px;
   text-align: center;
-  transform: translateX(1000px);
+  transform: translateX(-1000px);
   transition: ease-in-out 1s;
+
+  @media (max-width: @mobile-only) {
+    left: 40px;
+  }
 
   &__success {
     background-color: #00d50e;
