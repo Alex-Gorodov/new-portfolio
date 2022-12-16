@@ -92,6 +92,7 @@ const copy = (done) => {
     'src/*.ico',
     'src/manifest.webmanifest.json',
     'src/**/*.mp3',
+    'src/**/*.php',
   ], {
     base: 'src'
   })
