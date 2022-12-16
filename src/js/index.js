@@ -170,14 +170,15 @@ window.onscroll = function()  {
     }
     setTimeout(() => {
       skillsHtml.style.width = '90%';
-    }, 800);
+    }, 1200);
     setTimeout(() => {
       skillsCss.style.width = '70%';
-    }, 1100);
+    }, 1400);
     setTimeout(() => {
       skillsJs.style.width = '25%';
-    }, 1400);
+    }, 1600);
   }
+
   // Contact
   const contactTitle = document.querySelector('.contact__title');
   if(contactTitle.getBoundingClientRect().top <= 800){
