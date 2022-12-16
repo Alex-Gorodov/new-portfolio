@@ -20,7 +20,7 @@ class PortfolioItem {
     element.innerHTML = `
       <div class="portfolio-item__text-wrapper">
         <a class="portfolio-item__title" href="${this.links[1]}" target="_blank" rel="noopener nofollow" aria-label="To ${this.title} webpage">${this.title}</a>
-        <p class="portfolio-item__description">${this.description}</p>
+        <p class="description portfolio-item__description">${this.description}</p>
         <ul class="portfolio-item__buttons-list">
           <li class="portfolio-item__button-item">
             <a href="${this.links[0]}" class="portfolio-item__button" target="_blank" rel="noopener nofollow" aria-label="To ${this.title} on github">

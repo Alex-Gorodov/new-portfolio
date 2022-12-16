@@ -10,8 +10,21 @@
     color: @white;
     transition: 0.3s;
 
-    @media (min-width: 670px) {
+    @media (min-width: 540px) {
       color: @main-color;
+    }
+
+    &--minimazed {
+      @media (max-width: @mobile-only) {
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
+
+  &__icon--minimazed {
+    @media (max-width: @mobile-only) {
+      transform: scale(0.5) translate(-25px, -25px);
     }
   }
 

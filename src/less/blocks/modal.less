@@ -1,0 +1,31 @@
+.modal {
+  position: fixed;
+  bottom: 100px;
+  right: 50px;
+  padding: 20px 10px;
+  text-align: center;
+  transform: translateX(1000px);
+  transition: ease-in-out 1s;
+
+  &__success {
+    background-color: #00d50e;
+  }
+
+  &__error {
+    background-color: #ff0000;
+  }
+
+  &--show {
+    transform: translateX(0);
+  }
+
+  &__title {
+    font-size: 20px;
+    margin: 0;
+  }
+
+  &__description {
+    font-size: 16px;
+    margin: 0;
+  }
+}

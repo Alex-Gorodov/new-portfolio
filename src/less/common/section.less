@@ -1,0 +1,20 @@
+.section {
+  position: relative;
+  min-height: 25vh;
+  padding: 5vh 10vw;
+  color: @main-color;
+
+  @media (max-height: @screen-rotated) {
+    height: max-content;
+  }
+
+  @media (max-width: @mobile-only) {
+    grid-template-columns: 1fr;
+    margin-top: -100px;
+    padding: 80px 40px;
+  }
+
+  @media (min-width: @tablet) and (max-width: @desktop) {
+    padding: 2vh 60px;
+  }
+}

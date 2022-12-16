@@ -1,0 +1,95 @@
+.contact {
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+
+    @media (max-width: @mobile-only) {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+  }
+
+  &__description {
+    margin: 0;
+    font-size: 20px;
+    line-height: 1.4em;
+  }
+
+  &__form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+
+    @media (max-width: @mobile-only) {
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
+  }
+
+  &__item {
+    position: relative;
+    justify-self: stretch;
+
+    &--subject {
+      grid-column: 1/-1;
+    }
+
+    &--message {
+      resize: vertical;
+      grid-column: 1/-1;
+    }
+
+    &--invalid::after {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      display: block;
+      height: 3px;
+      background-color: #ff0000;
+      animation: error ease-in 1s forwards;
+      content: "";
+    }
+  }
+
+  &__field {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 0;
+    background-color: @white;
+    border: none;
+    border-radius: 0;
+    outline: 1px solid @main-color;
+    font-family: "Coolvetica", "Arial", sans-serif;
+    font-size: 20px;
+
+    &::placeholder {
+      color: fade(@main-color, 50%);
+    }
+
+    &:hover {
+      background-color: lighten(@main-color, 90%);
+    }
+
+    &:focus {
+      background-color: lighten(@main-color, 90%);
+    }
+  }
+
+  &__submit {
+    padding: 10px;
+    margin: 0;
+    grid-column: 1/-1;
+    border: 2px solid @main-color;
+    background-color: transparent;
+    border-radius: 0;
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:hover {
+      background-color: @main-color;
+      color: @white;
+    }
+  }
+}

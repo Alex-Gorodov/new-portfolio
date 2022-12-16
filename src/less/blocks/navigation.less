@@ -4,9 +4,22 @@
   justify-content: space-between;
   align-items: center;
   padding: 40px 100px;
+  transition: 0.8s;
 
   @media (max-width: @mobile-only) {
     padding: 20px 40px;
+  }
+
+  &--minimazed {
+    @media (max-width: @mobile-only) {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 10px 20px;
+      z-index: 1000;
+      background-color: @main-color;
+    }
   }
 
   &__toggler {

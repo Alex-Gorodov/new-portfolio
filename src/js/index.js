@@ -2,6 +2,10 @@ let ww = window.innerWidth;
 let navList = document.querySelector('.navigation__list');
 let navLinks = Array.from(document.querySelectorAll('.navigation__link'));
 const upBtn = document.querySelector('.main__up-btn');
+const navigation = document.querySelector('.navigation');
+
+const logoLink = document.querySelector('.header__logo');
+const logoIcon = document.querySelector('.header__icon');
 
 const blops = document.querySelectorAll('.page__blop');
 const blopAnimates = document.querySelectorAll('.page__blop-animate');
@@ -72,6 +76,19 @@ function scrollFunction() {
   }
 }
 
+function navigationTransform() {
+  if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+    logoLink.classList.add('header__logo--minimazed');
+    logoIcon.classList.add('header__icon--minimazed');
+    navigation.classList.add('navigation--minimazed');
+  } else {
+    logoLink.classList.remove('header__logo--minimazed');
+    logoIcon.classList.remove('header__icon--minimazed');
+    navigation.classList.remove('navigation--minimazed');
+    console.log('kokoko');
+  }
+}
+
 upBtn.addEventListener('click', () => {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
@@ -79,13 +96,14 @@ upBtn.addEventListener('click', () => {
 
 window.onscroll = function()  {
   scrollFunction();
+  navigationTransform();
   var images = document.getElementsByClassName('portfolio-item__image-wrapper');
   var titles = document.getElementsByClassName('portfolio-item__title');
-  var descriptions = document.getElementsByClassName('portfolio-item__description');
+  var descriptions = document.getElementsByClassName('description');
   var portfolioSocials = document.getElementsByClassName('portfolio-item__buttons-list');
   var mobiles = document.getElementsByClassName('portfolio-item__picture--mobile');
   var tablets = document.getElementsByClassName('portfolio-item__picture--tablet');
-  
+
   // Portfolio
   for(let i = 0; i < images.length; i++){
     if(images[i].getBoundingClientRect().top <= 700){
@@ -128,7 +146,13 @@ window.onscroll = function()  {
     }
   }
 
-  
+  // About
+  const aboutTitle = document.querySelector('.about__title');
+  if(aboutTitle.getBoundingClientRect().top <= 800){
+    aboutTitle.style.transform = 'translateX(0) translateY(0)';
+    aboutTitle.style.opacity = '1';
+  }
+
   // Skills
   const skillsTitle = document.querySelector('.skills__title');
   const skillsList = document.querySelectorAll('.skills__item');
@@ -153,5 +177,11 @@ window.onscroll = function()  {
     setTimeout(() => {
       skillsJs.style.width = '25%';
     }, 1400);
+  }
+  // Contact
+  const contactTitle = document.querySelector('.contact__title');
+  if(contactTitle.getBoundingClientRect().top <= 800){
+    contactTitle.style.transform = 'translateX(0) translateY(0)';
+    contactTitle.style.opacity = '1';
   }
 };
