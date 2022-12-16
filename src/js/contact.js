@@ -6,6 +6,11 @@ const success = document.querySelector('.modal__success');
 const error = document.querySelector('.modal__error');
 
 submit.onclick = function () {
+    inputs.forEach(input => {
+      input.addEventListener( "invalid", function(event) {
+        // event.preventDefault();
+      });
+    });
     form.addEventListener('submit', function () {
       success.classList.add('modal--show');
       setTimeout(() => {
@@ -16,7 +21,11 @@ submit.onclick = function () {
     });
     for (let i = 0; i < inputs.length; i++) {
       if (!inputs[i].validity.valid) {
-        inputs[i].blur();
+        inputs.forEach(input => {
+          input.addEventListener( "invalid", function(event) {
+            event.preventDefault();
+          });
+        });
         labels[i].classList.add('contact__item--invalid');
         error.classList.add('modal--show');
         setTimeout(() => {
