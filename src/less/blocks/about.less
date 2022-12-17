@@ -1,8 +1,15 @@
 .about {
   overflow-x: hidden;
 
+  &__title {
+    @media (max-width: @mobile-only) {
+      transform: translateX(-250px);
+    }
+  }
+
   &__description {
     font-size: 20px;
+    transform: skewX(-30deg) translateX(-450px);
     line-height: 1.4em;
   }
 }
