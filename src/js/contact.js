@@ -14,7 +14,7 @@ submit.onclick = function () {
       }, 5000);
       setTimeout(() => {
         inputs.forEach(item => {
-          item.value = "";
+          item.value = '';
         });
       }, 500);
       success.style.transition = 'cubic-bezier(0, 0.7, 0.2, 1.1) 0.5s';
