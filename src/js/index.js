@@ -47,7 +47,7 @@ window.onload = function() {
   });
 
   setTimeout(() => {
-      for(let i = 0; i < heroLetters.length; i++){
+    for(let i = 0; i < heroLetters.length; i++){
       setTimeout(() => {
         heroLetters[i].classList.add('animated', 'hero__letter--decorated');
         setTimeout(() => {
@@ -85,7 +85,6 @@ function navigationTransform() {
     logoLink.classList.remove('header__logo--minimazed');
     logoIcon.classList.remove('header__icon--minimazed');
     navigation.classList.remove('navigation--minimazed');
-    console.log('kokoko');
   }
 }
 
@@ -95,6 +94,7 @@ upBtn.addEventListener('click', () => {
 });
 
 window.onscroll = function()  {
+  fieldsScroll();
   scrollFunction();
   navigationTransform();
   var images = document.getElementsByClassName('portfolio-item__image-wrapper');
@@ -106,20 +106,20 @@ window.onscroll = function()  {
 
   // Portfolio
   for(let i = 0; i < images.length; i++){
-    if(images[i].getBoundingClientRect().top <= 700){
+    if(images[i].getBoundingClientRect().top <= 900){
       images[i].style.transform = 'translateY(0) translateX(0) skew(0)';
       images[i].style.opacity = '1';
     }
   }
   for(let i = 0; i < mobiles.length; i++){
-    if(mobiles[i].getBoundingClientRect().top <= 700){
+    if(mobiles[i].getBoundingClientRect().top <= 900){
       setTimeout(() => {
         mobiles[i].style.transform = 'translateX(0)';
       }, 300);
     }
   }
   for(let i = 0; i < tablets.length; i++){
-    if(tablets[i].getBoundingClientRect().top <= 700){
+    if(tablets[i].getBoundingClientRect().top <= 900){
       setTimeout(() => {
         tablets[i].style.transform = 'translateX(0)';
       }, 150);
@@ -159,7 +159,7 @@ window.onscroll = function()  {
   const skillsHtml = document.querySelector('.skills__value--html');
   const skillsCss = document.querySelector('.skills__value--css');
   const skillsJs = document.querySelector('.skills__value--js');
-  if(skillsTitle.getBoundingClientRect().top <= 800){
+  if(skillsTitle.getBoundingClientRect().top <= 1000){
     skillsTitle.style.transform = 'translateX(0) translateY(0)';
     skillsTitle.style.opacity = '1';
     for (let i = 0; i < skillsList.length; i++) {

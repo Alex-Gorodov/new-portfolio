@@ -15,6 +15,8 @@ class PortfolioItem {
     element.classList.add('portfolio-item');
     if (portfolio.length % 2 === 0) {
       element.classList.add('portfolio-item--odd');
+    } if (portfolio.length % 4 === 0) {
+      element.classList.add('portfolio-item--odd-returned');
     }
 
     element.innerHTML = `

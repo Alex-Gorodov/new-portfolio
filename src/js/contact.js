@@ -6,11 +6,6 @@ const success = document.querySelector('.modal__success');
 const error = document.querySelector('.modal__error');
 
 submit.onclick = function () {
-    inputs.forEach(input => {
-      input.addEventListener( "invalid", function(event) {
-        // event.preventDefault();
-      });
-    });
     form.addEventListener('submit', function () {
       success.classList.add('modal--show');
       setTimeout(() => {
@@ -38,3 +33,20 @@ submit.onclick = function () {
       }
     }
 };
+
+function fieldsScroll() {
+  for (let i = 0; i < labels.length; i++) {
+    if(labels[i].getBoundingClientRect().top <= 800){
+      setTimeout(() => {
+        labels[i].style.transform = 'translateX(0) translateY(0)';
+        labels[i].style.opacity = '1';
+      }, 40*i);
+    }
+  }
+  if (submit.getBoundingClientRect().top <= 900) {
+    setTimeout(() => {
+      submit.style.transform = 'translateX(0) translateY(0)';
+      submit.style.opacity = '1';
+    }, 200);
+  }
+}
