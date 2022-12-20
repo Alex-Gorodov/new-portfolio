@@ -41,11 +41,11 @@ submit.onclick = function () {
 
 function fieldsScroll() {
   for (let i = 0; i < labels.length; i++) {
-    if(labels[i].getBoundingClientRect().top <= 800){
+    if (labels[i].getBoundingClientRect().top <= 800) {
       setTimeout(() => {
         labels[i].style.transform = 'translateX(0) translateY(0)';
         labels[i].style.opacity = '1';
-      }, 40*i);
+      }, 40 * i);
     }
   }
   if (submit.getBoundingClientRect().top <= 900) {

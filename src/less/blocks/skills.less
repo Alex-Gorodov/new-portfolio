@@ -73,8 +73,9 @@
     top: 2px;
     height: 46px;
     border-radius: 30px;
-    background-color: @main-color;
-    transition: 1.6s;
+    background: linear-gradient(to right, #54ccd7 0%, #00d0e8 10%, @main-color 100%);
+    transition: all 1.6s, opacity 0.4s;
+    opacity: 0;
 
     @media (max-width: @mobile-only) {
       height: 32px;

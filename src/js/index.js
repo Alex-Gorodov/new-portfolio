@@ -169,12 +169,15 @@ window.onscroll = function()  {
       }, i*300 + 300);
     }
     setTimeout(() => {
-      skillsHtml.style.width = '90%';
+      skillsHtml.style.opacity = '1';
+      skillsHtml.style.width = '80%';
     }, 1200);
     setTimeout(() => {
+      skillsCss.style.opacity = '1';
       skillsCss.style.width = '70%';
     }, 1400);
     setTimeout(() => {
+      skillsJs.style.opacity = '1';
       skillsJs.style.width = '25%';
     }, 1600);
   }
