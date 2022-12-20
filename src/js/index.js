@@ -8,7 +8,7 @@ const logoLink = document.querySelector('.header__logo');
 const logoIcon = document.querySelector('.header__icon');
 
 const blops = document.querySelectorAll('.page__blop');
-const blopAnimates = document.querySelectorAll('.page__blop-animate');
+const blopAnimate = document.querySelector('animate');
 
 let heroLetters = document.querySelectorAll('.hero__letter');
 let heroDescription = document.querySelector('.hero__description');
@@ -42,9 +42,7 @@ window.onload = function() {
   blops.forEach(blop => {
     blop.classList.remove('page__blop--preloader');
   });
-  blopAnimates.forEach(item => {
-    item.setAttribute('dur', '10s');
-  });
+  blopAnimate.setAttribute('dur', '10s');
 
   setTimeout(() => {
     for(let i = 0; i < heroLetters.length; i++){

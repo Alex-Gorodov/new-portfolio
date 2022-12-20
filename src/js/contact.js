@@ -2,8 +2,8 @@ const form = document.querySelector('.contact__form');
 const labels = document.querySelectorAll('.contact__item');
 const inputs = document.querySelectorAll('.contact__field');
 const submit = document.querySelector('.contact__submit');
-const success = document.querySelector('.modal__success');
-const error = document.querySelector('.modal__error');
+const success = document.querySelector('.modal--success');
+const error = document.querySelector('.modal--error');
 
 submit.onclick = function () {
     form.addEventListener('submit', function () {
