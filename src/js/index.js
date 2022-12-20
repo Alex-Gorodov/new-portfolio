@@ -44,6 +44,15 @@ window.onload = function() {
   });
   blopAnimate.setAttribute('dur', '10s');
 
+  for (let i = 0; i < navLinks.length; i++) {
+    setTimeout(() => {
+      setTimeout(() => {
+        navLinks[i].classList.add('navigation__link--loaded');
+      }, i * 300);
+      navLinks[0].classList.add('navigation__link--active');
+    }, 1000);
+  }
+
   setTimeout(() => {
     for(let i = 0; i < heroLetters.length; i++){
       setTimeout(() => {

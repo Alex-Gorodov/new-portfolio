@@ -120,7 +120,7 @@
   &__link {
     color: @white;
     text-decoration: none;
-    opacity: 0.6;
+    opacity: 0;
     transition: 0.3s;
 
     @media (max-width: @mobile-only) {
@@ -130,6 +130,10 @@
     &:hover {
       opacity: 1;
       text-shadow: 0 0 20px @white;
+    }
+
+    &--loaded {
+      opacity: 0.6;
     }
 
     &--active {
