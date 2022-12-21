@@ -104,12 +104,22 @@ window.onscroll = function()  {
   fieldsScroll();
   scrollFunction();
   navigationTransform();
-  var images = document.getElementsByClassName('portfolio-item__image-wrapper');
-  var titles = document.getElementsByClassName('portfolio-item__title');
-  var descriptions = document.getElementsByClassName('description');
-  var portfolioSocials = document.getElementsByClassName('portfolio-item__buttons-list');
-  var mobiles = document.getElementsByClassName('portfolio-item__picture--mobile');
-  var tablets = document.getElementsByClassName('portfolio-item__picture--tablet');
+  let titles = document.querySelectorAll('.title');
+  let images = document.getElementsByClassName('portfolio-item__image-wrapper');
+  let portfoliotitles = document.getElementsByClassName('portfolio-item__title');
+  let descriptions = document.getElementsByClassName('description');
+  let portfolioSocials = document.getElementsByClassName('portfolio-item__buttons-list');
+  let mobiles = document.getElementsByClassName('portfolio-item__picture--mobile');
+  let tablets = document.getElementsByClassName('portfolio-item__picture--tablet');
+
+  for(let i = 0; i < titles.length; i++){
+    if(titles[i].getBoundingClientRect().top <= 800){
+      titles[i].classList.add('portfolio-item__title--animated');
+      setTimeout(() => {
+        titles[i].style.opacity = '1';
+      }, 200);
+    }
+  }
 
   // Portfolio
   for(let i = 0; i < images.length; i++){
@@ -133,10 +143,12 @@ window.onscroll = function()  {
     }
   }
   
-  for(let i = 0; i < titles.length; i++){
-    if(titles[i].getBoundingClientRect().top <= 800){
-      titles[i].classList.add('portfolio-item__title--animated');
-      titles[i].style.opacity = '1';
+  for(let i = 0; i < portfoliotitles.length; i++){
+    if(portfoliotitles[i].getBoundingClientRect().top <= 800){
+      portfoliotitles[i].classList.add('portfolio-item__title--animated');
+      setTimeout(() => {
+        portfoliotitles[i].style.opacity = '1';
+      }, 200);
     }
   }
   for(let i = 0; i < descriptions.length; i++){
