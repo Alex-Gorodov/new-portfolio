@@ -113,8 +113,8 @@ window.onscroll = function()  {
   let tablets = document.getElementsByClassName('portfolio-item__picture--tablet');
 
   for(let i = 0; i < titles.length; i++){
-    if(titles[i].getBoundingClientRect().top <= 800){
-      titles[i].classList.add('portfolio-item__title--animated');
+    if(titles[i].getBoundingClientRect().top <= 700){
+      titles[i].classList.add('title--animated');
       setTimeout(() => {
         titles[i].style.opacity = '1';
       }, 200);
@@ -129,14 +129,14 @@ window.onscroll = function()  {
     }
   }
   for(let i = 0; i < mobiles.length; i++){
-    if(mobiles[i].getBoundingClientRect().top <= 900){
+    if(mobiles[i].getBoundingClientRect().top <= 800){
       setTimeout(() => {
         mobiles[i].style.transform = 'translateX(0)';
       }, 300);
     }
   }
   for(let i = 0; i < tablets.length; i++){
-    if(tablets[i].getBoundingClientRect().top <= 900){
+    if(tablets[i].getBoundingClientRect().top <= 800){
       setTimeout(() => {
         tablets[i].style.transform = 'translateX(0)';
       }, 150);
@@ -145,8 +145,8 @@ window.onscroll = function()  {
   
   for(let i = 0; i < portfoliotitles.length; i++){
     if(portfoliotitles[i].getBoundingClientRect().top <= 800){
-      portfoliotitles[i].classList.add('portfolio-item__title--animated');
       setTimeout(() => {
+        portfoliotitles[i].classList.add('portfolio-item__title--animated');
         portfoliotitles[i].style.opacity = '1';
       }, 200);
     }
@@ -154,8 +154,7 @@ window.onscroll = function()  {
   for(let i = 0; i < descriptions.length; i++){
     if(descriptions[i].getBoundingClientRect().top <= 825){
       descriptions[i].style.transform = 'skewX(0) translateX(0) translateY(0)';
-      descriptions[i].style.opacity = '1';
-      
+      descriptions[i].style.opacity = '1';      
     }
   }
   for(let i = 0; i < portfolioSocials.length; i++){
