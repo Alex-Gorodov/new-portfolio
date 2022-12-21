@@ -9,7 +9,7 @@
 
   @media (max-width: @mobile-only) {
     grid-template-columns: 1fr;
-    padding: 100px 0;
+    padding: 60px 0;
   }
 
   @media (min-width: @tablet) and (max-width: @desktop) {
@@ -53,6 +53,15 @@
 
     &--animated {
       animation: porttitle 0.5s ease-in-out;
+    }
+
+    &:hover {
+      outline: none;
+      text-shadow: 0 0 20px;
+    }
+
+    &:active {
+      text-shadow: 0 0 5px;
     }
 
     &:focus-visible {
