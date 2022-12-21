@@ -48,12 +48,10 @@
     text-transform: capitalize;
     text-decoration: none;
     color: inherit;
-    transform: skewX(45deg) translateX(-250px);
-    transition: 0.8s;
     opacity: 0;
-
-    @media (max-width: @mobile-only) {
-      transform: skewX(0) translateX(0) translateY(200px);
+    
+    &--animated {
+      animation: rotatex 2s ease-in-out;
     }
   }
 
@@ -210,11 +208,9 @@
 }
 
 .portfolio-item--odd .portfolio-item__title {
-  transform: skewX(-45deg) translateX(250px);
   text-align: right;
 
   @media (max-width: @mobile-only) {
-    transform: skewX(0) translateX(0) translateY(200px);
     text-align: left;
   }
 }

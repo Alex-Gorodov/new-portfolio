@@ -135,7 +135,7 @@ window.onscroll = function()  {
   
   for(let i = 0; i < titles.length; i++){
     if(titles[i].getBoundingClientRect().top <= 800){
-      titles[i].style.transform = 'skewX(0) translateX(0) translateY(0)';
+      titles[i].classList.add('portfolio-item__title--animated');
       titles[i].style.opacity = '1';
     }
   }
