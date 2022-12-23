@@ -13,10 +13,10 @@ class PortfolioItem {
   render() {
     const element = document.createElement('div');
     element.classList.add('portfolio-item');
-    if (portfolio.length % 2 === 0) {
-      element.classList.add('portfolio-item--odd');
-    } if (portfolio.length % 4 === 0) {
-      element.classList.add('portfolio-item--odd-returned');
+    if (portfolio.length % 2 === 1) {
+      element.classList.add('portfolio-item--gradient');
+    } if (portfolio.length % 4 === 1) {
+      element.classList.add('portfolio-item--gradient-returned');
     }
 
     element.innerHTML = `

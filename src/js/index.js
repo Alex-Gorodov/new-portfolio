@@ -106,8 +106,9 @@ window.onscroll = function()  {
   navigationTransform();
   let titles = document.querySelectorAll('.title');
   let images = document.getElementsByClassName('portfolio-item__image-wrapper');
-  let portfoliotitles = document.getElementsByClassName('portfolio-item__title');
   let descriptions = document.getElementsByClassName('description');
+  let portfolioTexts = document.querySelectorAll('.portfolio-item__text-wrapper');
+  let portfolioDescriptions = document.querySelectorAll('.portfolio-item__description');
   let portfolioSocials = document.getElementsByClassName('portfolio-item__buttons-list');
   let mobiles = document.getElementsByClassName('portfolio-item__picture--mobile');
   let tablets = document.getElementsByClassName('portfolio-item__picture--tablet');
@@ -142,26 +143,42 @@ window.onscroll = function()  {
       }, 150);
     }
   }
-  
-  for(let i = 0; i < portfoliotitles.length; i++){
-    if(portfoliotitles[i].getBoundingClientRect().top <= 800){
+  for(let i = 0; i < portfolioTexts.length; i++){
+    if(portfolioTexts[i].getBoundingClientRect().top <= 700){
       setTimeout(() => {
-        portfoliotitles[i].classList.add('portfolio-item__title--animated');
-        portfoliotitles[i].style.opacity = '1';
+        portfolioTexts[i].style.transform = 'translateY(0) translateX(0) skew(0)';
+        portfolioTexts[i].style.opacity = '1';
       }, 200);
     }
   }
   for(let i = 0; i < descriptions.length; i++){
-    if(descriptions[i].getBoundingClientRect().top <= 825){
-      descriptions[i].style.transform = 'skewX(0) translateX(0) translateY(0)';
-      descriptions[i].style.opacity = '1';      
+    if(descriptions[i].getBoundingClientRect().top <= 700){
+      setTimeout(() => {
+        descriptions[i].style.transform = 'rotateX(0) translateY(0)';
+        setTimeout(() => {
+          descriptions[i].style.opacity = '1';
+        }, 120);
+      }, 300);
+    }
+  }
+  for(let i = 0; i < portfolioDescriptions.length; i++){
+    if(portfolioDescriptions[i].getBoundingClientRect().top <= 700){
+      setTimeout(() => {
+        portfolioDescriptions[i].style.transform = 'rotateX(0) translateY(0)';
+        setTimeout(() => {
+          portfolioDescriptions[i].style.opacity = '1';
+        }, 120);
+      }, 900);
     }
   }
   for(let i = 0; i < portfolioSocials.length; i++){
     if(portfolioSocials[i].getBoundingClientRect().top <= 850){
-      portfolioSocials[i].style.transform = 'translateX(0) translateY(0)';
-      portfolioSocials[i].style.opacity = '1';
-    }
+      setTimeout(() => {
+        portfolioSocials[i].style.transform = 'rotateX(0) translateY(0)';
+        setTimeout(() => {
+          portfolioSocials[i].style.opacity = '1';
+        }, 120);
+      }, 1000);
   }
 
   // Skills
@@ -191,3 +208,4 @@ window.onscroll = function()  {
     }, 1600);
   }
 };
+}
