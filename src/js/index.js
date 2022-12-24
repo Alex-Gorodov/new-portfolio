@@ -1,7 +1,7 @@
 let ww = window.innerWidth;
 let wh = window.innerHeight;
 if (ww < 700) {
-  wh *= 1.5;
+  wh *= 1.75;
 }
 let navList = document.querySelector('.navigation__list');
 let navLinks = Array.from(document.querySelectorAll('.navigation__link'));
