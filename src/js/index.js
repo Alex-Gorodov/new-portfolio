@@ -76,7 +76,7 @@ window.onload = function() {
     heroDescription.style.opacity = '1';
     heroSocial.style.transform = 'translateY(0)';
     heroSocial.style.opacity = '1';
-  }, 3500);
+  }, 2500);
 };
 
 function scrollFunction() {
@@ -118,7 +118,7 @@ window.onscroll = function()  {
   let tablets = document.getElementsByClassName('portfolio-item__picture--tablet');
 
   for(let i = 0; i < titles.length; i++) {
-    if(titles[i].getBoundingClientRect().top <= wh / 1.6) {
+    if(titles[i].getBoundingClientRect().top <= wh / 1.2) {
       titles[i].classList.add('title--animated');
       setTimeout(() => {
         titles[i].style.opacity = '1';
@@ -126,7 +126,7 @@ window.onscroll = function()  {
     }
   }
   for(let i = 0; i < descriptions.length; i++) {
-    if(descriptions[i].getBoundingClientRect().top <= wh / 1.6) {
+    if(descriptions[i].getBoundingClientRect().top <= wh) {
       setTimeout(() => {
         descriptions[i].style.transform = 'rotateX(0) translateY(0)';
         setTimeout(() => {
@@ -138,11 +138,11 @@ window.onscroll = function()  {
 
   // Portfolio
   for(let i = 0; i < images.length; i++) {
-    if(images[i].getBoundingClientRect().top <= wh / 1.6) {
+    if(images[i].getBoundingClientRect().top <= wh) {
       setTimeout(() => {
         images[i].style.transform = 'translateY(0) translateX(0) skew(0)';
         images[i].style.opacity = '1';
-      }, 200);
+      }, 100);
     }
   }
   for(let i = 0; i < mobiles.length; i++) {
@@ -164,7 +164,7 @@ window.onscroll = function()  {
       setTimeout(() => {
         portfolioTexts[i].style.transform = 'translateY(0) translateX(0) skew(0)';
         portfolioTexts[i].style.opacity = '1';
-      }, 300);
+      }, 200);
     }
   }
   for(let i = 0; i < portfolioDescriptions.length; i++) {
@@ -174,7 +174,7 @@ window.onscroll = function()  {
         setTimeout(() => {
           portfolioDescriptions[i].style.opacity = '1';
         }, 120);
-      }, 600);
+      }, 300);
     }
   }
   for(let i = 0; i < portfolioSocials.length; i++) {
@@ -184,7 +184,7 @@ window.onscroll = function()  {
         setTimeout(() => {
           portfolioSocials[i].style.opacity = '1';
         }, 120);
-      }, 900);
+      }, 400);
     }
   }
 

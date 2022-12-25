@@ -52,6 +52,6 @@ function fieldsScroll() {
     setTimeout(() => {
       submit.style.transform = 'translateX(0) translateY(0)';
       submit.style.opacity = '1';
-    }, 200);
+    }, 500);
   }
 }
