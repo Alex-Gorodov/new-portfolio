@@ -116,6 +116,7 @@ window.onscroll = function()  {
   let portfolioSocials = document.getElementsByClassName('portfolio-item__buttons-list');
   let mobiles = document.getElementsByClassName('portfolio-item__picture--mobile');
   let tablets = document.getElementsByClassName('portfolio-item__picture--tablet');
+  let desktops = document.getElementsByClassName('portfolio-item__picture--desktop');
 
   for(let i = 0; i < titles.length; i++) {
     if(titles[i].getBoundingClientRect().top <= wh / 1.2) {
@@ -157,6 +158,14 @@ window.onscroll = function()  {
       setTimeout(() => {
         tablets[i].style.transform = 'translateX(0)';
       }, 150);
+    }
+  }
+  for(let i = 0; i < desktops.length; i++) {
+    if(desktops[i].getBoundingClientRect().top <= wh / 1.6) {
+      setTimeout(() => {
+        desktops[i].style.transform = 'translateY(0)';
+        desktops[i].style.opacity = '1';
+      }, 250);
     }
   }
   for(let i = 0; i < portfolioTexts.length; i++) {
