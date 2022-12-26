@@ -13,10 +13,8 @@ submit.onclick = function () {
         success.classList.remove('modal--show');
       }, 5000);
       setTimeout(() => {
-        inputs.forEach(item => {
-          item.value = '';
-        });
-      }, 500);
+        form.reset();
+      }, 50);
       success.style.transition = 'cubic-bezier(0, 0.7, 0.2, 1.1) 0.5s';
     });
     for (let i = 0; i < inputs.length; i++) {

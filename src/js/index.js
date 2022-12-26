@@ -160,15 +160,15 @@ window.onscroll = function()  {
     }
   }
   for(let i = 0; i < portfolioTexts.length; i++) {
-    if(portfolioTexts[i].getBoundingClientRect().top <= wh / 1.6) {
+    if(portfolioTexts[i].getBoundingClientRect().top <= wh) {
       setTimeout(() => {
         portfolioTexts[i].style.transform = 'translateY(0) translateX(0) skew(0)';
         portfolioTexts[i].style.opacity = '1';
-      }, 200);
+      }, 400);
     }
   }
   for(let i = 0; i < portfolioDescriptions.length; i++) {
-    if(portfolioDescriptions[i].getBoundingClientRect().top <= wh / 1.6) {
+    if(portfolioDescriptions[i].getBoundingClientRect().top <= wh) {
       setTimeout(() => {
         portfolioDescriptions[i].style.transform = 'perspective(1000px) rotateX(0) translateY(0em)';
         setTimeout(() => {
@@ -178,7 +178,7 @@ window.onscroll = function()  {
     }
   }
   for(let i = 0; i < portfolioSocials.length; i++) {
-    if(portfolioSocials[i].getBoundingClientRect().top <= wh / 1.4) {
+    if(portfolioSocials[i].getBoundingClientRect().top <= wh) {
       setTimeout(() => {
         portfolioSocials[i].style.transform = 'perspective(1000px) rotateX(0) translateY(0em)';
         setTimeout(() => {
@@ -199,19 +199,19 @@ window.onscroll = function()  {
       setTimeout(() => {
         skillsList[i].style.transform = 'translateX(0) translateY(0)';
         skillsList[i].style.opacity = '1';
-      }, i*300 + 300);
+      }, i*100 + 100);
     }
     setTimeout(() => {
       skillsHtml.style.opacity = '1';
       skillsHtml.style.width = '80%';
-    }, 200);
+    }, 1000);
     setTimeout(() => {
       skillsCss.style.opacity = '1';
       skillsCss.style.width = '70%';
-    }, 200);
+    }, 1000);
     setTimeout(() => {
       skillsJs.style.opacity = '1';
       skillsJs.style.width = '25%';
-    }, 200);
+    }, 1000);
   }
 };
