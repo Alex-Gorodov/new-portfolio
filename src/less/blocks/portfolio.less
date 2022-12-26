@@ -5,10 +5,14 @@
     max-width: 1240px;
     margin: 40px auto;
     margin-bottom: -140px;
-    padding: 10vw 0 0;
+    padding: 10vw 40px 0;
 
     @media (max-width: @mobile-only) {
       padding-left: 40px;
+    }
+
+    @media (max-height: @screen-rotated) {
+      margin: 160px auto -80px;
     }
   }
 }
