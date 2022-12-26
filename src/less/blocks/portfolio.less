@@ -2,8 +2,13 @@
   padding: 0;
 
   &__title {
-    margin: 0;
-    margin-top: 40px;
-    padding: 0 10vw;
+    max-width: 1240px;
+    margin: 40px auto;
+    margin-bottom: -140px;
+    padding: 10vw 0 0;
+
+    @media (max-width: @mobile-only) {
+      padding-left: 40px;
+    }
   }
 }

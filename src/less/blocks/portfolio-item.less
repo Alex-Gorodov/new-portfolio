@@ -1,20 +1,29 @@
 .portfolio-item {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  padding: 20vh 10vw;
-  gap: 40px;
   color: @main-color;
-  align-items: center;
   overflow: hidden;
+
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 1240px;
+    margin: auto;
+    padding: 20vh 5vw;
+    gap: 40px;
+    align-items: center;
+
+    @media (max-width: @mobile-only) {
+      grid-template-columns: 1fr;
+      padding: 5vh 10px;
+    }
+  }
 
   @media (max-width: @mobile-only) {
     grid-template-columns: 1fr;
     gap: 0;
     row-gap: 40px;
-    padding: 60px 0;
 
     &:first-of-type {
-      padding-top: 40px;
+      padding-top: 20vh;
     }
   }
 
@@ -24,10 +33,6 @@
     &:first-of-type {
       padding-top: 40px;
     }
-  }
-
-  &:first-of-type {
-    padding-top: 40px;
   }
 
   &--gradient {
@@ -228,10 +233,6 @@
   grid-column: 1;
   transform: translateX(800px);
   opacity: 0;
-
-  @media (max-width: @mobile-only) {
-    grid-column: 2;
-  }
 }
 
 .portfolio-item--gradient .portfolio-item__image-wrapper {
@@ -239,6 +240,7 @@
   transform: translateX(-1000px) skew(45deg);
 
   @media (max-width: @mobile-only) {
+    grid-column: 1;
     transform: none;
   }
 }

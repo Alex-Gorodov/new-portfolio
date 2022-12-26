@@ -1,7 +1,7 @@
 let ww = window.innerWidth;
 let wh = window.innerHeight;
 if (ww < 700) {
-  wh *= 1.75;
+  wh *= 2;
 }
 let navList = document.querySelector('.navigation__list');
 let navLinks = Array.from(document.querySelectorAll('.navigation__link'));
@@ -11,7 +11,7 @@ const navigation = document.querySelector('.navigation');
 const logoLink = document.querySelector('.header__logo');
 const logoIcon = document.querySelector('.header__icon');
 
-const blops = document.querySelectorAll('.page__blop');
+const blops = document.querySelectorAll('.header__blop');
 const blopAnimate = document.querySelector('animate');
 
 let heroLetters = document.querySelectorAll('.hero__letter');
@@ -44,7 +44,7 @@ navLinks.forEach(link => {
 
 window.onload = function() {
   blops.forEach(blop => {
-    blop.classList.remove('page__blop--preloader');
+    blop.classList.remove('header__blop--preloader');
   });
   blopAnimate.setAttribute('dur', '10s');
 

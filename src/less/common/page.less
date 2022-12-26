@@ -20,49 +20,4 @@
     background-position: center;
     z-index: -1;
   }
-
-  &__blop-wrapper {
-    position: absolute;
-    overflow: hidden;
-    min-height: 100vh;
-    width: 100%;
-
-    @media (max-height: @screen-rotated) {
-      min-height: 100%;
-    }
-  }
-
-  &__blop {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    max-height: fit-content;
-    transition: all 1s;
-    transition-timing-function: cubic-bezier(0.4, -0.2, 0.2, 1);
-
-    @media (min-width: @desktop) {
-      transform: translate(-270px, -300px) scale(1) rotate(15deg);
-      width: 1200px;
-    }
-
-    @media (min-width: @tablet) and (max-width: @desktop) {
-      transform: translate(-240px, -200px) scale(1) rotate(15deg);
-      width: 1000px;
-    }
-
-    @media (max-width: @mobile-only) {
-      transform: translate(-250px, -240px) scale(1) rotate(15deg);
-      width: 900px;
-    }
-
-    &--preloader {
-      position: fixed;
-      top: 100%;
-      left: 100%;
-      transform: translate(-50%, -50%) scale(0.1) rotate(15deg);
-      width: 100px;
-    }
-  }
 }

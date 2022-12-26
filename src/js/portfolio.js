@@ -20,6 +20,7 @@ class PortfolioItem {
     }
 
     element.innerHTML = `
+    <div class="portfolio-item__inner">
       <div class="portfolio-item__text-wrapper">
         <a class="portfolio-item__title" href="${this.links[1]}" target="_blank" rel="noopener nofollow" aria-label="To ${this.title} webpage">${this.title}</a>
         <p class="portfolio-item__description">${this.description}</p>
@@ -54,6 +55,7 @@ class PortfolioItem {
           <img class="portfolio-item__image portfolio-item__image--tablet" src="img/portfolio/${this.image}.png" width="208" height="306" alt="${this.alt}" srcset="img/portfolio/${this.image}@2x.png 2x">
         </picture>
       </div>
+    </div>
     `;
     this.parent.append(element);
     portfolio.push(this.element);
