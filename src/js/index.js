@@ -85,13 +85,9 @@ function scrollFunction() {
 }
 
 function navigationTransform() {
-  if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-    logoLink.classList.add('header__logo--minimazed');
-    logoIcon.classList.add('header__icon--minimazed');
+  if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 100) {
     navigation.classList.add('navigation--minimazed');
   } else {
-    logoLink.classList.remove('header__logo--minimazed');
-    logoIcon.classList.remove('header__icon--minimazed');
     navigation.classList.remove('navigation--minimazed');
   }
 }

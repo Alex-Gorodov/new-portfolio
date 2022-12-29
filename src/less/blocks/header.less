@@ -1,7 +1,7 @@
 .header {
   max-width: 1240px;
   width: 100%;
-  height: 100vh;
+  max-height: 100vh;
   margin: auto;
   transition: 1s;
 
@@ -65,17 +65,10 @@
       color: @main-color;
     }
 
-    &--minimazed {
-      @media (max-width: @mobile-only) {
-        width: 30px;
-        height: 30px;
-      }
-    }
-  }
-
-  &__icon--minimazed {
     @media (max-width: @mobile-only) {
-      transform: scale(0.5) translate(-25px, -25px);
+      width: 30px;
+      height: 30px;
+      transform: scale(0.5) translate(-10px, -10px);
     }
   }
 
