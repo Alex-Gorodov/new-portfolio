@@ -85,7 +85,7 @@ function scrollFunction() {
 }
 
 function navigationTransform() {
-  if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 100) {
+  if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 0) {
     navigation.classList.add('navigation--minimazed');
   } else {
     navigation.classList.remove('navigation--minimazed');
