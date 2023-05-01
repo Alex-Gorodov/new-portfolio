@@ -115,3 +115,12 @@ new PortfolioItem(
   'Sedona',
   '.portfolio'
 ).render();
+
+new PortfolioItem(
+  'Six cities',
+  'My first React and TypeScript project for hotels searching. The design belongs to <a class="html-academy" href="https://htmlacademy.ru" target="_blank" rel="noopener nofollow" aria-label="To HTML Academy site">HTML&nbsp;Academy</a>.',
+  ['https://alex-gorodov.github.io/Six-cities/', 'https://github.com/Alex-Gorodov/590651-six-cities-simple-12'],
+  'six-cities',
+  'Six cities',
+  '.portfolio'
+).render();
