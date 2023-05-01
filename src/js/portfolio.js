@@ -42,7 +42,7 @@ class PortfolioItem {
           </li>
         </ul>
       </div>
-      <div class="portfolio-item__image-wrapper">
+      <a class="portfolio-item__image-wrapper" href="${this.links[1]}">
         <picture class="portfolio-item__picture portfolio-item__picture--mobile">
           <source srcset="img/portfolio/${this.image}-mobile.webp 1x, img/portfolio/${this.image}-mobile@2x.webp 2x" type="image/webp">
           <img class="portfolio-item__image portfolio-item__image--mobile" src="img/portfolio/${this.image}.png" width="103" height="206" alt="${this.alt}" srcset="img/portfolio/${this.image}@2x.png 2x">
@@ -55,7 +55,7 @@ class PortfolioItem {
           <source srcset="img/portfolio/${this.image}-tablet.webp 1x, img/portfolio/${this.image}-tablet@2x.webp 2x" type="image/webp">
           <img class="portfolio-item__image portfolio-item__image--tablet" src="img/portfolio/${this.image}.png" width="208" height="306" alt="${this.alt}" srcset="img/portfolio/${this.image}@2x.png 2x">
         </picture>
-      </div>
+      </a>
     </div>
     `
     : element.innerHTML = `
@@ -80,12 +80,12 @@ class PortfolioItem {
         </li>
       </ul>
     </div>
-    <div class="portfolio-item__image-wrapper">
+    <a class="portfolio-item__image-wrapper" href="${this.links[1]}">
       <picture class="portfolio-item__picture portfolio-item__picture--desktop">
         <source srcset="img/portfolio/${this.image}-desktop.webp 1x, img/portfolio/${this.image}-desktop@2x.webp 2x" type="image/webp">
         <img class="portfolio-item__image portfolio-item__image--desktop" src="img/portfolio/${this.image}.png" width="467" height="371" alt="${this.alt}" srcset="img/portfolio/${this.image}@2x.png 2x">
       </picture>
-    </div>
+    </a>
   </div>
     `;
     this.parent.append(element);
