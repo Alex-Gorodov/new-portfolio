@@ -94,6 +94,16 @@ class PortfolioItem {
 }
 
 new PortfolioItem(
+  false,
+  'Six cities',
+  'My first React, Redux and TypeScript project for hotels searching. Since the project is hosted on GitHub Pages, errors may occur on page reload.<br> The design belongs to <a class="html-academy" href="https://htmlacademy.ru" target="_blank" rel="noopener nofollow" aria-label="To HTML Academy site">HTML&nbsp;Academy</a>.',
+  ['https://github.com/Alex-Gorodov/590651-six-cities-simple-12', 'https://alex-gorodov.github.io/Six-cities/'],
+  'six-cities',
+  'Six cities',
+  '.portfolio'
+).render();
+
+new PortfolioItem(
   true,
   'Bright lights',
   'Landing page of singer. Music player inside.',
@@ -136,7 +146,7 @@ new PortfolioItem(
 new PortfolioItem(
   true,
   'Glaccy',
-  'Here they sell ice cream with delivery. The design belongs to <a class="html-academy" href="https://htmlacademy.ru" target="_blank" rel="noopener nofollow" aria-label="To HTML Academy site">HTML&nbsp;Academy</a>.',
+  'Here they sell ice cream with delivery.<br> The design belongs to <a class="html-academy" href="https://htmlacademy.ru" target="_blank" rel="noopener nofollow" aria-label="To HTML Academy site">HTML&nbsp;Academy</a>.',
   ['https://github.com/Alex-Gorodov/Glaccy', 'https://alex-gorodov.github.io/Glaccy/'],
   'glaccy',
   'Glaccy',
@@ -146,19 +156,9 @@ new PortfolioItem(
 new PortfolioItem(
   true,
   'Sedona',
-  'Some useful information for those who want to go to Sedona. Have you heard about this city? The design belongs to <a class="html-academy" href="https://htmlacademy.ru" target="_blank" rel="noopener nofollow" aria-label="To HTML Academy site">HTML&nbsp;Academy</a>.',
+  'Some useful information for those who want to go to Sedona. Have you heard about this city?<br> The design belongs to <a class="html-academy" href="https://htmlacademy.ru" target="_blank" rel="noopener nofollow" aria-label="To HTML Academy site">HTML&nbsp;Academy</a>.',
   ['https://github.com/htmlacademy-adaptive/590651-sedona-26', 'https://htmlacademy-adaptive.github.io/590651-sedona-26/11/'],
   'sedona',
   'Sedona',
-  '.portfolio'
-).render();
-
-new PortfolioItem(
-  false,
-  'Six cities',
-  'My first React and TypeScript project for hotels searching. The design belongs to <a class="html-academy" href="https://htmlacademy.ru" target="_blank" rel="noopener nofollow" aria-label="To HTML Academy site">HTML&nbsp;Academy</a>.',
-  ['https://github.com/Alex-Gorodov/590651-six-cities-simple-12', 'https://alex-gorodov.github.io/Six-cities/'],
-  'six-cities',
-  'Six cities',
   '.portfolio'
 ).render();
