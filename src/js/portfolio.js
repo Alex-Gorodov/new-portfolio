@@ -147,7 +147,7 @@ new PortfolioItem(
   true,
   'Glaccy',
   'Here they sell ice cream with delivery.<br> The design belongs to <a class="html-academy" href="https://htmlacademy.ru" target="_blank" rel="noopener nofollow" aria-label="To HTML Academy site">HTML&nbsp;Academy</a>.',
-  ['https://github.com/Alex-Gorodov/Glaccy', 'https://alex-gorodov.github.io/Glaccy/'],
+  ['https://github.com/Alex-Gorodov/Glaccy', 'https://alex-gorodov.github.io/gllacy/'],
   'glaccy',
   'Glaccy',
   '.portfolio'
