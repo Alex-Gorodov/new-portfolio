@@ -145,11 +145,11 @@ new PortfolioItem(
 
 new PortfolioItem(
   true,
-  'Glaccy',
+  'Gllacy',
   'Here they sell ice cream with delivery.<br> The design belongs to <a class="html-academy" href="https://htmlacademy.ru" target="_blank" rel="noopener nofollow" aria-label="To HTML Academy site">HTML&nbsp;Academy</a>.',
-  ['https://github.com/Alex-Gorodov/Glaccy', 'https://alex-gorodov.github.io/gllacy/'],
-  'glaccy',
-  'Glaccy',
+  ['https://github.com/Alex-Gorodov/gllacy', 'https://alex-gorodov.github.io/gllacy/'],
+  'gllacy',
+  'Gllacy',
   '.portfolio'
 ).render();
 
